@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cpp Film</title>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+    <style>
+        *{
+            margin: 0%;
+            
+            
+        }
+        body {
+  background: #fff;
+  scroll-behavior: smooth;
+}
+/* ✅ Navbar Styles */
+
+#navbar{
+    background-color: #0d1b2a;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    height:50px;
+}
+.logo{
+    margin-top: 13px;
+}
+.menu{
+    text-decoration: none;
+    margin-top: 13px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.menu :hover{
+    color: #ffd60a;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 13px;
+  font-size: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  margin-top: 10px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #fff;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
+button{
+    padding: 2px 4px;
+    cursor: pointer;
+    background-color: #0d1b2a;
+    color: white;
+    border: none;
+    font-size: 18px;
+}
+.dropdown  :hover{
+    color: #ffd60a;
+}
+
+
+.invertors{
+    margin-top: 13px;
+}
+.invertors a{
+       color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+.invertors :hover{
+    color: #ffd60a;
+}
+
+
+.contactus {
+    margin-top: 13px;
+    font-size: 20px;
+}
+.contactus a{
+    
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.contactus :hover{
+    
+    color: #ffd60a;
+}
+
+/* ✅ Footer Styles */
+.footer {
+  background-color: #0d1b2a;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.footer div {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.logo2 img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.logo2 p,
+.office p,
+.office2 p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.links h2 {
+  margin-bottom: 10px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 8px;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.links a:hover {
+  color: #ffd60a;
+}
+
+.last {
+  background-color: #000814;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ✅ Responsive Fixes */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+        .firsth1 {
+    
+  background: linear-gradient(to right, #370617,#6f1d1b,#780000);
+            height: 400px;
+    width: 100%;
+    display: flex;
+    font-size: 30px;
+    color: white;
+}
+.heading h1{
+    margin-top: 90px;
+    margin-left: 420px;
+}
+.heading h2{
+    margin-top: 20px;
+    margin-left: 560px;
+}
+.aboutus{
+    display: flex;
+    height: 600px;
+    background: linear-gradient(to right,#ffffff);
+    justify-content: space-evenly;
+    border: 2px solid #6f1d1b;
+}
+
+.aboutus h3{
+    margin-bottom: 30px;
+    margin-left: 80px;
+    margin-top: 20px;
+    font-size: 41px;
+}
+.aboutus p{
+    margin-bottom: 20px;
+    gap: 20px;
+    width: 600px;
+    margin-left: 80px;
+    margin-top: 20px;
+    font-size: 20px;
+
+}
+.aboutimage img{
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    border: 2px solid #6f1d1b;
+    margin-right: 40px;
+    margin-top: 50px;
+}
+.aboutp{
+    border: 2px solid #6f1d1b;
+    height: 400px;
+    width: 700px;
+    margin-top: 100px;
+}
+
+
+#container{
+            display: flex;
+            justify-content: space-evenly;
+            border: 2px #22223b;
+            border-radius: 10px;
+            text-align: center;
+     
+        }
+
+        .box11{
+            border: 2px solid black;
+            border-radius: 12px;
+            margin-top: 50px;
+            background-color: #f2e9e4;
+            padding: 20px;
+            height: 400px;
+        
+            
+        }
+        .app1 h2{
+            margin-top: 80px;
+            font-size: 40px;
+        }
+
+        .app1h h2{
+            margin-top: 20px;
+            background-color: #9a8c98;
+            padding: 10px;
+            border-radius: 100px;
+            border: 2px solid black;
+            height: 20px;
+            margin-bottom: 20px;
+        }
+
+        .app1{
+            margin-top: 40px;
+        }
+
+        .app1 img{
+            height: 250px;
+            width: 250px;
+            border-radius: 12px;
+            margin-top: 30px;
+            border: 2px solid black;
+ 
+            
+        }
+
+        .box2{
+            border: 2px solid black;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #f2e9e4;
+            height: 400px;
+        }
+
+        .app2h h2{
+         
+            margin-top: 20px;
+            background-color: #9a8c98;
+            padding: 10px;
+            border-radius: 100px;
+            border: 2px solid black;
+            height: 20px;
+        }
+        
+
+        .app2{
+            margin-top: 30px;
+        }
+
+        .app2 #img1 img{
+            height: 250px;
+            width: 250px;
+            background-color: #006d77;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            border: 2px solid black;
+
+            
+        }
+        .box3{
+            border: 2px solid black;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #f2e9e4;
+            height: 400px;
+        }
+
+        .app3h h2{
+            margin-top: 20px;
+            background-color: #9a8c98;
+            padding: 10px;
+            border-radius: 100px;
+            border: 2px solid black;
+            height: 20px;
+        }
+        
+
+         .app3{
+            margin-top: 30px;
+        }
+        .app3 img{
+            height: 250px;
+            width: 250px;
+            border-radius: 12px;
+            border: 2px solid black;
+        }
+       
+
+        .app4h h2{
+            margin-top: 20px;
+            background-color: #9a8c98;
+            padding: 10px;
+            border-radius: 100px;
+            border: 2px solid black;
+            height: 20px;
+            margin-bottom: 20px;
+        }
+
+
+        .app4 img{
+            height: 250px;
+            width: 250px;
+            border-radius: 12px;
+            margin-top: 10px;
+            border: 2px solid black;
+ 
+            
+        }
+        .box4{
+            border: 2px solid black;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #f2e9e4;
+            height: 400px;
+        }
+        .application{
+            margin-bottom: 20px;
+        }
+         .application h1{
+            text-align: center;
+            margin-top: 40px;
+            height: 50px;
+            width: 500px;
+            background-color: #a4243b;
+            margin-left: 500px;
+            border: 2px solid black;
+            border-radius: 15px;
+            padding: 8px 8px 8px 8px ;
+            text-align: center;
+
+            
+        }
+
+        .container2{
+            display: flex;
+            justify-content: space-evenly;
+            border: 2px #22223b;
+            border-radius: 10px;
+            text-align: center;
+ }
+
+        .nextbox11{
+            border: 2px solid black;
+            border-radius: 12px;
+            margin-top: 50px;
+            background-color: #f2e9e4;
+            padding: 20px;
+            height: 400px;
+            width: 260px;
+        
+            
+        }
+        .nextapp1 h2{
+            margin-top: 80px;
+            font-size: 40px;
+        }
+
+        .nextapp1h h2{
+            margin-top: 20px;
+            background-color: #9a8c98;
+            padding: 10px;
+            border-radius: 100px;
+            border: 2px solid black;
+            height: 20px;
+            margin-bottom: 20px;
+        }
+
+        .nextapp1{
+            margin-top: 40px;
+        }
+
+        .nextapp1 img{
+            height: 250px;
+            width: 250px;
+            border-radius: 12px;
+            margin-top: 30px;
+            border: 2px solid black;
+ 
+            
+        }
+
+        .nextbox2{
+            border: 2px solid black;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #f2e9e4;
+            height: 400px;
+            width: 260px;
+        }
+
+        .nextapp2h h2{
+         
+            margin-top: 20px;
+            background-color: #9a8c98;
+            padding: 10px;
+            border-radius: 100px;
+            border: 2px solid black;
+            height: 20px;
+        }
+        
+
+        .nextapp2{
+            margin-top: 30px;
+        }
+
+        .nextapp2 img{
+            height: 250px;
+            width: 250px;
+            background-color: #006d77;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            border: 2px solid black;
+
+            
+        }
+        .nextbox3{
+            border: 2px solid black;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #f2e9e4;
+            height: 400px;
+        }
+
+        .nextapp3h h2{
+            margin-top: 20px;
+            background-color: #9a8c98;
+            padding: 10px;
+            border-radius: 100px;
+            border: 2px solid black;
+            height: 20px;
+        }
+        
+
+         .nextapp3{
+            margin-top: 30px;
+        }
+        .nextapp3 img{
+            height: 250px;
+            width: 250px;
+            border-radius: 12px;
+            border: 2px solid black;
+        }
+       
+
+        .nextapp4h h2{
+            margin-top: 20px;
+            background-color: #9a8c98;
+            padding: 10px;
+            border-radius: 100px;
+            border: 2px solid black;
+            height: 20px;
+            margin-bottom: 20px;
+        }
+
+
+        .nextapp4 img{
+            height: 250px;
+            width: 250px;
+            border-radius: 12px;
+            margin-top: 10px;
+            border: 2px solid black;
+ 
+            
+        }
+        .nextbox4{
+            border: 2px solid black;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #f2e9e4;
+            height: 400px;
+        }
+
+        #container3{
+            display: flex;
+            justify-content: space-evenly;
+            border: 2px #22223b;
+            border-radius: 10px;
+            text-align: center;            
+          
+            
+        }
+
+        .thirdbox11{
+            border: 2px solid black;
+            border-radius: 12px;
+            margin-top: 50px;
+            background-color: #f2e9e4;
+            padding: 20px;
+            height: 400px;
+        
+            
+        }
+        .thirdapp1 h2{
+            margin-top: 80px;
+            font-size: 40px;
+        }
+
+        .thirdapp1h h2{
+            margin-top: 20px;
+            background-color: #9a8c98;
+            padding: 10px;
+            border-radius: 100px;
+            border: 2px solid black;
+            height: 20px;
+            margin-bottom: 20px;
+        }
+
+        .thirdapp1{
+            margin-top: 40px;
+        }
+
+        .thirdapp1 img{
+            height: 250px;
+            width: 250px;
+            border-radius: 12px;
+            margin-top: 30px;
+            border: 2px solid black;
+ 
+            
+        }
+
+        .thirdbox2{
+            border: 2px solid black;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #f2e9e4;
+            height: 400px;
+        }
+
+        .thirdapp2h h2{
+         
+            margin-top: 20px;
+            background-color: #9a8c98;
+            padding: 10px;
+            border-radius: 100px;
+            border: 2px solid black;
+            height: 20px;
+        }
+        
+
+        .thirdapp2{
+            margin-top: 30px;
+        }
+
+        .thirdapp2 #thirdimg1 img{
+            height: 250px;
+            width: 250px;
+            background-color: #006d77;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            border: 2px solid black;
+
+            
+        }
+        .thirdbox3{
+            border: 2px solid black;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #f2e9e4;
+            height: 400px;
+        }
+
+        .thirdapp3h h2{
+            margin-top: 20px;
+            background-color: #9a8c98;
+            padding: 10px;
+            border-radius: 100px;
+            border: 2px solid black;
+            height: 20px;
+        }
+         .thirdapp3{
+            margin-top: 30px;
+        }
+        .thirdapp3 img{
+            height: 250px;
+            width: 250px;
+            border-radius: 12px;
+            border: 2px solid black;
+        }
+       
+
+        .thirdapp4h h2{
+            margin-top: 20px;
+            background-color: #9a8c98;
+            padding: 10px;
+            border-radius: 100px;
+            border: 2px solid black;
+            height: 20px;
+            margin-bottom: 20px;
+        }
+
+
+        .thirdapp4 img{
+            height: 250px;
+            width: 250px;
+            border-radius: 12px;
+            margin-top: 10px;
+            border: 2px solid black;
+ 
+            
+        }
+        .thirdbox4{
+            border: 2px solid black;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #f2e9e4;
+            height: 400px;
+        }
+
+        .content-card {
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  gap: 40px;
+  flex-wrap: wrap;
+
+
+}
+.content-card.reverse {
+  flex-direction: row-reverse;
+  display: flex;
+}
+
+.content-card div {
+  flex: 1;
+}
+.content-card h2 {
+  font-size: 2rem;
+  color: #6f1d1b;
+  text-decoration: underline;
+  margin-top: 10px;
+  
+}
+.content-card p {
+  font-size: 1.2rem;
+  color: #370617;
+  margin-top: 10px;
+
+
+}
+
+ </style>
+</head>
+<body>
+    <!-- ✅ NAVBAR -->
+<div>
+        <div id="navbar"> 
+            <div class="logo">
+                <a href="pashupati.html"><img src="pal_logo.png" alt=""> </a>
+            
+            
+            </div>
+
+            <div class="menu"> <a href="pashupati.html">Home </a></div>
+
+            <div class="dropdown">
+  <button onclick="toggleDropdown('productMenu')">Product</button>
+  <div id="productMenu" class="dropdown-content">
+    <a href="acrylic.html">Acrylic</a>
+    <a href="cppfilm.html">CPP Film</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('servicesMenu')">Services</button>
+  <div id="servicesMenu" class="dropdown-content">
+    <a href="research and dev.html">Research and Development</a>
+    <a href="PLANT.HTML">Plant</a>
+    <a href="TECHNOLOGY.html">Technology</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('featuresMenu')">Features</button>
+  <div id="featuresMenu" class="dropdown-content">
+    <a href="features.html">Human Resources</a>
+    <!-- <a href="policy.html">HR Policy</a>
+    <a href="activity.html">Major Activity</a> -->
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('aboutMenu')">About</button>
+  <div id="aboutMenu" class="dropdown-content">
+    <a href="company profime.html">Company Profile</a>
+    <a href="career.html">Career</a>
+  </div>
+</div>
+
+
+            <div class="invertors"> <a href="">Invesrtors </a></div>
+            <div class="contactus"> <a href="contactus.html"> Contact Us</a> </div>
+            <!-- <div class="search">
+                <input placeholder="search..">
+            </div> -->
+        </div>
+    </div>
+
+  
+
+    <div class="firsth1">
+    <div class="heading">
+        <h1>Pasupati Acrylon Limited</h1>
+             <h2>Cpp Film Division</h2>
+    </div>
+    </div> 
+    
+    <div class="aboutus">
+        <div class="aboutp">
+            <h3>About Us</h3>
+        <p>Pasupati Acrylon Ltd. is one of the leading producers of Acrylon Fiber in India since 1990. Having established ourselves in the Acrylic marcket, we have been looking out for newer avenues and have diversifed into production of CPP Films with an installed capacity of 10,000 MT per annum.
+            <br>
+            This state of art manufacturing  unit of CPP Film cast Line has been  imported from Germany and Italy. vacuum metalizer & advance slitting Machine from U.K. We are producing Film of thickness from 15 micron to 150 micron such as NaturalCPP (Lamination grade)/ White opaque/ Met CPP/ Medical grade/ Bread packaging etc.
+
+        </p>
+        </div>
+        <div class="aboutimage">
+        <img src="white cpp.webp" alt="">
+    </div>
+    </div>
+
+<div class="application">
+        <h1> Product Application</h1>
+
+    </div>
+       <div id="container"> 
+
+        
+        <div class="box11">
+
+     <div class="app1h">
+              <h2>1.Food Wraps</h2>
+        </div>
+
+        <div class="app1">
+            
+             <img src="maggie.webp" alt="">
+        
+        </div>
+
+        </div>
+
+        <div class="box2">
+
+    <div class="app2h">
+        <h2>2.Candy Wrap</h2>
+    
+
+    <div class="app2">
+        <div id="img1">
+            
+            <img src="candy2.webp" alt="">
+        </div>
+    </div>
+    </div>
+        </div>
+        <div class="box3">
+
+        <div class="app3h">
+              <h2>3.Stationary packaging</h2>
+        
+
+        <div class="app3">
+            
+             <img src="stationarymain.jpg" alt="">
+        </div>
+        </div>
+        </div>
+        <div class="thirdbox3">
+
+        <div class="thirdapp3h">
+              <h2>4. Vacuum Metallization</h2>
+        
+
+        <div class="thirdapp3">
+            
+             <img src="vacumm-packaging.jpg" alt="">
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+       </div>
+
+       <div class="container2">
+         <div class="nextbox11">
+
+            <div class="nextapp1h">
+              <h2>5.Garment webp</h2>
+            </div>
+
+        <div class="nextapp1">
+            
+             <img src="garments.webp" alt="">
+        
+        </div>
+
+        </div>
+
+        <div class="nextbox2">
+
+    <div class="nextapp2h">
+        <h2>6.Retort packaging</h2>
+    
+
+    <div class="nextapp2">
+            <img src="retort4.jpg" alt="">
+    </div>
+    </div>
+        </div>
+        <div class="nextbox3">
+            <div class="nextapp3h">
+              <h2> 7.Floral Wraps</h2>
+        
+
+        <div class="nextapp3">
+            
+             <img src="packaging_flores_9.jpg" alt="">
+        </div>
+        </div>
+
+        </div>
+       
+        <div class="nextbox4">
+            <div class="nextapp4h">
+              <h2> 8. FMCG Packaging</h2>
+        
+
+        <div class="nextapp4">
+            
+             <img src="fmcg4.png" alt="">
+        </div>
+        </div>
+        </div>
+       
+    </div>
+       </div>
+
+       </div>
+
+          <div id="container3"> 
+
+        
+        <div class="thirdbox11">
+
+     <div class="thirdapp1h">
+              <h2>9.Over Wrap</h2>
+        </div>
+
+        <div class="thirdapp1">
+            
+             <img src="overwrap1.jpg" alt="">
+        
+        </div>
+
+        </div>
+
+        <div class="thirdbox2">
+
+    <div class="thirdapp2h">
+        <h2>10. Anti-Fog</h2>
+    
+
+    <div class="thirdapp2">
+        <div id="thirdimg1">
+            
+            <img src="antifog.jpg" alt="">
+        </div>
+    </div>
+    </div>
+        </div>
+
+        
+
+        <div class="nextbox3">
+
+        <div class="nextapp3h">
+              <h2>11.Pharmaceutical Products</h2>
+        
+
+        <div class="nextapp3">
+            
+             <img src="pharm3.jpg" alt="">
+        </div>
+        </div>
+        </div>
+    </div>
+       </div>
+
+ 
+       <section class="content-card reverse" data-aos="fade-up">
+    <img src="cpp.jpg" alt="CPP Film">
+    <div>
+      <h2>About CPP Film Business</h2>
+      <p>Our CPP Film meets the requirements set out in the BRC GLOBAL STANDARD for PACKAGING AND PACKING MATERIALS ( ISSUE 5: JULY 2015) and is categorised as HIGH HYGINE Grade-A by the BRCGS. </p>
+      <p>We are committed to total customer satisfaction by identifying their specif needs translating them into quality products and providing dependable after sales support, resulting in TOTAL CUSTOMER 
+        DELIGHT. Our CPP film is widely accepted PAN INDIA and is known for excellent quality and consistency, we have also exported to countries like Nepal, Bahrain and other GCC countries.</p>
+    </div>
+  </section>
+
+   
+<!-- ✅ FOOTER -->
+<div class="footer">
+  <div class="logo2">
+    <img src="pal_logo.png" alt="PAL Logo" />
+    <p>
+      We are one of the leading producers of Acrylic fiber. We started commercial operations in 1990 with technical collaboration with SNIA BPD Italy.
+    </p>
+  </div>
+
+  <div class="links">
+    <h2>Quick Links</h2>
+    <ul>
+      <li><a href="ENVIRONMENTAL CLEARANCE.html">Environmental Clearance</a></li>
+      <li><a href="acrylic fiber.html">Acrylic Fiber</a></li>
+      <li><a href="maincpp.html">CPP Film</a></li>
+      <li><a href="ENVIRONMENT.HTML">Environment</a></li>
+      <li><a href="PLANT.HTML">Plant</a></li>
+      <li><a href="research and dev.html">Research and Development</a></li>
+      <li><a href="TECHNOLOGY.html">Technology</a></li>
+    </ul>
+  </div>
+
+  <div class="office">
+    <h3>Corporate Office</h3>
+    <p>M-14, Connaught Circus, New Delhi-110001</p>
+    <p>91-11-47627400<br>delhi@pasupatiacrylon.com<br>hrd@pasupatiacrylon.com</p>
+  </div>
+
+  <div class="office2">
+    <h3>Regd. Office & Works</h3>
+    <p>Kashipur Road, Thakurdwara-244601, Moradabad (U.P.)<br>works@pasupatiacrylon.com</p>
+    <p>Branch Office Ludhiana<br>mktgldh@pasupatiacrylon.com<br>91-161 5083473</p>
+  </div>
+</div>
+
+<div class="last">
+  <p>Copyright © 2025 - Pasupati Acrylon</p>
+</div>
+
+    </div>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script> 
+    function toggleDropdown(id) {
+  const dropdown = document.getElementById(id).parentElement;
+  dropdown.classList.toggle("active");
+
+  // Close others if open
+  document.querySelectorAll('.dropdown').forEach(item => {
+    if (item !== dropdown) item.classList.remove('active');
+  });
+}
+
+// Optional: Close menu when clicking outside
+window.onclick = function(event) {
+  if (!event.target.matches('button')) {
+    document.querySelectorAll('.dropdown').forEach(item => {
+      item.classList.remove('active');
+    });
+  }
+}
+AOS.init();
+</script>
+
+</body>
+</html>

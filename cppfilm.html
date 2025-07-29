@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPP Film </title>
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0%;
+}
+
+#navbar{
+    background-color: #0d1b2a;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    height:50px;
+}
+.logo{
+    margin-top: 13px;
+}
+.menu{
+    text-decoration: none;
+    margin-top: 13px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.menu :hover{
+    color: #ffd60a;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 13px;
+  font-size: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  margin-top: 10px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #fff;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
+button{
+    padding: 2px 4px;
+    cursor: pointer;
+    background-color: #0d1b2a;
+    color: white;
+    border: none;
+    font-size: 18px;
+}
+.dropdown  :hover{
+    color: #ffd60a;
+}
+
+
+.invertors{
+    margin-top: 13px;
+}
+.invertors a{
+       color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+.invertors :hover{
+    color: #ffd60a;
+}
+
+
+.contactus {
+    margin-top: 13px;
+    font-size: 20px;
+}
+.contactus a{
+    
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.contactus :hover{
+    
+    color: #ffd60a;
+}
+
+/* ✅ Footer Styles */
+.footer {
+  background-color: #0d1b2a;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.footer div {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.logo2 img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.logo2 p,
+.office p,
+.office2 p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.links h2 {
+  margin-bottom: 10px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 8px;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.links a:hover {
+  color: #ffd60a;
+}
+
+.last {
+  background-color: #000814;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ✅ Responsive Fixes */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+header {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    padding: 50px 40px;
+    text-align: center;
+    height: 200px;
+    font-size: 40px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #023047;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd60a;
+}
+
+
+#header h1{
+    background: linear-gradient(to right, #ffffff,#98c1d9);
+    height: 300px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 60px;
+    color: #023047;
+}
+
+ .h2 h1{
+    margin-top: 30px;
+    text-align: center;
+    color: #023047;
+
+ }
+ .h2 h3{
+    width: 600px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-left: 450px;
+    text-align: center;
+
+
+}
+
+.mainimg img{
+    margin-top: 50px;
+    margin-left: 35px;
+    border: 2px solid black;
+    height: 350px;
+    width: 450px;
+    margin-bottom: 50px;
+ } 
+ 
+
+ .document img{
+    margin-top: 100px ;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+ }
+ #natural h1{
+    background-image: url('ChatGPT Image Jul 4, 2025, 12_43_48 PM.png');
+    height: 400px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 60px;
+    color: #023047;
+}
+
+.naturalcpp{
+    display: flex;
+}
+
+.naturalcpp img{
+    height: 350px;
+    width: 500px;
+    margin-left: 100px;
+    margin-top: 50px;
+    
+    border: 2px solid black;
+
+}
+
+.naturalh{
+    margin-top: 70px;
+    margin-left: 80px;
+    font-size: 20px;
+}
+
+.naturalh p{
+    width: 400px;
+    margin-top: 20px;
+    
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.naturaldoc img{
+    height: 600;
+    width: 600;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+#natural h1{
+    
+  background: linear-gradient(to right, #ffffff, #203a43, #2c5364);
+    height: 250px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 60px;
+    color: #023047;
+}
+
+#metalizedcpp{
+    
+    background-image: url('ChatGPT Image Jul 4, 2025, 12_43_48 PM.png');
+    height: 250px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    color: #023047;
+
+}
+
+#metalized{
+    display: flex;
+}
+
+#metalized img{
+    height: 350px;
+    width: 500px;
+    margin-left: 100px;
+    margin-top: 50px;
+    border: 2px solid black;
+
+}
+
+.metalizedh{
+    margin-top: 70px;
+    margin-left: 80px;
+    font-size: 20px;
+    background-color: #fdfdfd;
+}
+
+.metalizedh p{
+    width: 400px;
+    margin-top: 20px;
+    
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#metalizedcpp img{
+    height: 600;
+    width: 600;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 2px solid black;
+}
+.metadoc img{
+    height: 600;
+    width: 600;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+
+
+ .leftimg{
+    display: flex;
+ }
+
+ .leftimg img{
+    background-color: #bde0fe;
+ }
+
+ .rightpart{
+    width: 100%;
+    background-color: #a2d2ff;
+
+ }
+
+ .rightpart h1{
+    margin-top: 50px;
+    margin-left: 30px;
+ }
+
+ .rightpart p{
+    margin-top: 20px;
+    margin-left: 30px;
+    text-align: left;
+    width: 700px;
+
+ }
+
+ 
+    </style>
+</head>
+<body>
+
+    
+    <div>
+        <div id="navbar"> 
+            <div class="logo">
+                <a href="pashupati.html"><img src="pal_logo.png" alt=""> </a>
+            
+            
+            </div>
+
+            <div class="menu"> <a href="pashupati.html">Home </a></div>
+
+            <div class="dropdown">
+  <button onclick="toggleDropdown('productMenu')">Product</button>
+  <div id="productMenu" class="dropdown-content">
+    <a href="acrylic.html">Acrylic</a>
+    <a href="cppfilm.html">CPP Film</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('servicesMenu')">Services</button>
+  <div id="servicesMenu" class="dropdown-content">
+    <a href="research and dev.html">Research and Development</a>
+    <a href="PLANT.HTML">Plant</a>
+    <a href="TECHNOLOGY.html">Technology</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('featuresMenu')">Features</button>
+  <div id="featuresMenu" class="dropdown-content">
+    <a href="features.html">Human Resources</a>
+    <!-- <a href="policy.html">HR Policy</a>
+    <a href="activity.html">Major Activity</a> -->
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('aboutMenu')">About</button>
+  <div id="aboutMenu" class="dropdown-content">
+    <a href="company profime.html">Company Profile</a>
+    <a href="career.html">Career</a>
+  </div>
+</div>
+
+
+            <div class="invertors"> <a href="">Invesrtors </a></div>
+            <div class="contactus"> <a href="contactus.html"> Contact Us</a> </div>
+            <!-- <div class="search">
+                <input placeholder="search..">
+            </div> -->
+        </div>
+    </div>
+        <header>
+        <h1>CPP Film</h1>
+        <nav>
+            <a href="#header">White CPP</a>
+            <a href="#natural">Natural CPP</a>
+            <a href="#metalizedcpp">Metalized CPP</a>
+        </nav>
+    </header>
+
+    <div id="header">
+        <h1> White CPP</h1>
+    </div>
+
+      <div class="h2">
+        <h1>
+        WOP CPP Film
+    </h1>
+    <h3>This WOP CPP Film is categorically formulated to deliver excellent opacity, strength, 
+        stiffness along with outstanding heat sealing feature. Application uses of this WOP is done
+         as lamination substrates for packs used for Food, Baby Diaper Packs, Dry Food Packs like Biscuits,
+          Detergent and several other materials for packing.</h3>
+    </div>
+
+    <div class="mainimg">
+        <img src="white cpp.webp" alt="">
+        <img src="whitecpp3.webp" alt="">
+        <img src="whitecpp2.jpg" alt="">
+    </div>
+
+    <div class="document">
+        <img src="document.jpg" alt="">
+    </div>
+
+    <div id="natural" 
+ style=" background: linear-gradient(to right, #ffffff, #203a43, #2c5364);">
+        <h1>Natural CPP</h1>
+    </div>
+    <div class="naturalcpp">
+        <img src="transparent.jpg" alt="">
+        <div class="naturalh">
+            <h2>Transparent CPP Films
+            </h2>
+            <p>These transparent CPP Films are basically ultra clear Cast Film which is specially designed for offering 
+                excellent performance with great appearance and easy conversion to do flexible packaging.</p>
+        </div>
+    </div>
+
+    <div class="naturaldoc">
+        <img src="naturalcpp.jpg" alt="">
+    </div>
+
+    <div id="metalizedcpp">
+        <h1>Metalized CPP</h1>
+    </div>
+
+    <div id="metalized">
+        <img src="cpp.jpg" alt="">
+        <div class="metalizedh">
+            <h2>Improved Properties</h2>
+            <p>Plazma and Corona treatment facility of this Met CPP Film helps to increase the shelf life & barrier properties. 
+                It also provides a metallic Glossy Appearance which resembles the look of aluminium foil</p>
+        </div>
+    </div>
+
+    <div class="metadoc">
+        <img src="metalized.jpg" alt="">
+    </div>
+
+
+    <div class="leftimg">
+        <img src="LeftImage.png" alt="">
+        <div class="rightpart">
+            <h1>Global Market Place</h1>
+            <p>We at Pasupati Acrylon Ltd. are always on the lookout for newer avenues and have diversified into 
+                production of CPP Films with installed capacity of 10000 MT/Annum. This state-of-art manufacturing unit 
+                of CPP FILM Cast Line has been imported from Germany & Italy, vacuum metallizer & advance Slitting Machine from U.K</p>
+        </div>
+    </div>
+
+<!-- ✅ FOOTER -->
+<div class="footer">
+  <div class="logo2">
+    <img src="pal_logo.png" alt="PAL Logo" />
+    <p>
+      We are one of the leading producers of Acrylic fiber. We started commercial operations in 1990 with technical collaboration with SNIA BPD Italy.
+    </p>
+  </div>
+
+  <div class="links">
+    <h2>Quick Links</h2>
+    <ul>
+      <li><a href="ENVIRONMENTAL CLEARANCE.html">Environmental Clearance</a></li>
+      <li><a href="acrylic fiber.html">Acrylic Fiber</a></li>
+      <li><a href="maincpp.html">CPP Film</a></li>
+      <li><a href="ENVIRONMENT.HTML">Environment</a></li>
+      <li><a href="PLANT.HTML">Plant</a></li>
+      <li><a href="research and dev.html">Research and Development</a></li>
+      <li><a href="TECHNOLOGY.html">Technology</a></li>
+    </ul>
+  </div>
+
+  <div class="office">
+    <h3>Corporate Office</h3>
+    <p>M-14, Connaught Circus, New Delhi-110001</p>
+    <p>91-11-47627400<br>delhi@pasupatiacrylon.com<br>hrd@pasupatiacrylon.com</p>
+  </div>
+
+  <div class="office2">
+    <h3>Regd. Office & Works</h3>
+    <p>Kashipur Road, Thakurdwara-244601, Moradabad (U.P.)<br>works@pasupatiacrylon.com</p>
+    <p>Branch Office Ludhiana<br>mktgldh@pasupatiacrylon.com<br>91-161 5083473</p>
+  </div>
+</div>
+
+<div class="last">
+  <p>Copyright © 2025 - Pasupati Acrylon</p>
+</div>
+<script>
+    function toggleDropdown(id) {
+  const dropdown = document.getElementById(id).parentElement;
+  dropdown.classList.toggle("active");
+
+  // Close others if open
+  document.querySelectorAll('.dropdown').forEach(item => {
+    if (item !== dropdown) item.classList.remove('active');
+  });
+}
+
+// Optional: Close menu when clicking outside
+window.onclick = function(event) {
+  if (!event.target.matches('button')) {
+    document.querySelectorAll('.dropdown').forEach(item => {
+      item.classList.remove('active');
+    });
+  }
+}
+</script>
+</body>
+</html>

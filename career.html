@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0%;
+        }
+        body{
+            
+    background: linear-gradient(to right, #ffffff,#d9d9d9,#284b63);
+        }
+        
+        #navbar{
+    background-color: #0d1b2a;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    height:50px;
+}
+.logo{
+    margin-top: 13px;
+}
+.menu{
+    text-decoration: none;
+    margin-top: 13px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.menu :hover{
+    color: #ffd60a;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 13px;
+  font-size: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  margin-top: 10px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #fff;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
+button{
+    padding: 2px 4px;
+    cursor: pointer;
+    background-color: #0d1b2a;
+    color: white;
+    border: none;
+    font-size: 18px;
+}
+.dropdown  :hover{
+    color: #ffd60a;
+}
+
+
+.invertors{
+    margin-top: 13px;
+}
+.invertors a{
+       color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+.invertors :hover{
+    color: #ffd60a;
+}
+
+
+.contactus {
+    margin-top: 13px;
+    font-size: 20px;
+}
+.contactus a{
+    
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.contactus :hover{
+    
+    color: #ffd60a;
+}
+
+        .header{
+
+    background-image: url('careerimg2.jpg');
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid black;
+
+}
+.grow{
+    display: flex;
+    margin-top: 80px;
+}
+.grow img{
+    height: 350px;
+    width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-left: 200px;
+}
+.grow1 div{
+      flex: 1;
+}
+
+.grow1{
+    margin-left: 130px;
+
+}
+.grow1 h1{
+    
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 15px;
+
+}
+
+.grow1 p{
+    width: 450px;
+    font-size: 20px;
+    color: #1e3a8a;
+}
+
+
+.form-container {
+  max-width: 700px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 15px 0 5px;
+  font-size: 15px;
+  color: #333;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4285f4;
+}
+.form-container button {
+  margin-top: 25px;
+  padding: 14px;
+  background-color: #6b8ef1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-container button :hover {
+  background-color: #5078e1;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-container {
+  max-width: 700px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 15px 0 5px;
+  font-size: 15px;
+  color: #333;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4285f4;
+}
+
+.apply{
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+
+}
+.apply h1{
+    color: red;
+}
+.apply h3{
+    margin-top: 10px;
+    color: #1e3a8a;
+    text-decoration: underline;
+}
+
+.footer {
+  background-color: #0d1b2a;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.footer div {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.logo2 img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.logo2 p,
+.office p,
+.office2 p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.links h2 {
+  margin-bottom: 10px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 8px;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.links a:hover {
+  color: #ffd60a;
+}
+
+.last {
+  background-color: #000814;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ✅ Responsive Fixes */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+  
+     <div>
+        <div id="navbar"> 
+            <div class="logo">
+                <a href="pashupati.html"><img src="pal_logo.png" alt=""> </a>
+            
+            
+            </div>
+
+            <div class="menu"> <a href="pashupati.html">Home </a></div>
+
+            <div class="dropdown">
+  <button onclick="toggleDropdown('productMenu')">Product</button>
+  <div id="productMenu" class="dropdown-content">
+    <a href="acrylic.html">Acrylic</a>
+    <a href="cppfilm.html">CPP Film</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('servicesMenu')">Services</button>
+  <div id="servicesMenu" class="dropdown-content">
+    <a href="research and dev.html">Research and Development</a>
+    <a href="PLANT.HTML">Plant</a>
+    <a href="TECHNOLOGY.html">Technology</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('featuresMenu')">Features</button>
+  <div id="featuresMenu" class="dropdown-content">
+    <a href="features.html">Human Resources</a>
+    <!-- <a href="policy.html">HR Policy</a>
+    <a href="activity.html">Major Activity</a> -->
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('aboutMenu')">About</button>
+  <div id="aboutMenu" class="dropdown-content">
+    <a href="company profime.html">Company Profile</a>
+    <a href="career.html">Career</a>
+  </div>
+</div>
+
+
+            <div class="invertors"> <a href="">Invesrtors </a></div>
+            <div class="contactus"> <a href="contactus.html"> Contact Us</a> </div>
+            <!-- <div class="search">
+                <input placeholder="search..">
+            </div> -->
+        </div>
+    </div>
+
+  
+    <div class="header"></div>
+    <div class="grow">
+        <img src="work with us img.jpg" alt="">
+        <div class="grow1">
+              <h1>Grow With Us</h1>
+        <p>We build the best experience for our community – as a team.Due to employee oriented Human Relation Policies of the company majority
+            of our employees are working for decades in the organization as Pasupati family.</p>
+        </div>
+    </div>
+
+    <div class="apply">
+        <h1>Apply Now</h1>
+        <h3>We Will Get in Touch Soon</h3>
+    </div>
+
+    <div class="form-container">
+    <form action="https://formspree.io/f/mkgbdnrk" method="POST">
+         <input type="hidden" name="_redirect" value="http://127.0.0.1:5500/thankyou.html">
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Your email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="phone">Phone number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <label for="message">Your message (optional)</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message..."></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+   <div class="footer">
+  <div class="logo2">
+    <img src="pal_logo.png" alt="PAL Logo" />
+    <p>
+      We are one of the leading producers of Acrylic fiber. We started commercial operations in 1990 with technical collaboration with SNIA BPD Italy.
+    </p>
+  </div>
+
+  <div class="links">
+    <h2>Quick Links</h2>
+    <ul>
+      <li><a href="ENVIRONMENTAL CLEARANCE.html">Environmental Clearance</a></li>
+      <li><a href="acrylic fiber.html">Acrylic Fiber</a></li>
+      <li><a href="maincpp.html">CPP Film</a></li>
+      <li><a href="ENVIRONMENT.HTML">Environment</a></li>
+      <li><a href="PLANT.HTML">Plant</a></li>
+      <li><a href="research and dev.html">Research and Development</a></li>
+      <li><a href="TECHNOLOGY.html">Technology</a></li>
+    </ul>
+  </div>
+
+  <div class="office">
+    <h3>Corporate Office</h3>
+    <p>M-14, Connaught Circus, New Delhi-110001</p>
+    <p>91-11-47627400<br>delhi@pasupatiacrylon.com<br>hrd@pasupatiacrylon.com</p>
+  </div>
+
+  <div class="office2">
+    <h3>Regd. Office & Works</h3>
+    <p>Kashipur Road, Thakurdwara-244601, Moradabad (U.P.)<br>works@pasupatiacrylon.com</p>
+    <p>Branch Office Ludhiana<br>mktgldh@pasupatiacrylon.com<br>91-161 5083473</p>
+  </div>
+</div>
+
+<div class="last">
+  <p>Copyright © 2025 - Pasupati Acrylon</p>
+</div>
+
+    <script src="pashupati.js">pashupati.js</script>
+
+</body>
+</html>

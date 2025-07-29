@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Company Profile - Pasupati Acrylon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* ===== NAVBAR ===== */
+  #navbar{
+    background-color: #0d1b2a;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    height:50px;
+}
+.logo{
+    margin-top: 13px;
+}
+.menu{
+    text-decoration: none;
+    margin-top: 13px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.menu :hover{
+    color: #ffd60a;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 13px;
+  font-size: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  margin-top: 10px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #fff;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
+button{
+    padding: 2px 4px;
+    cursor: pointer;
+    background-color: #0d1b2a;
+    color: white;
+    border: none;
+    font-size: 18px;
+}
+.dropdown  :hover{
+    color: #ffd60a;
+}
+
+
+.invertors{
+    margin-top: 13px;
+}
+.invertors a{
+       color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+.invertors :hover{
+    color: #ffd60a;
+}
+
+
+.contactus {
+    margin-top: 13px;
+    font-size: 20px;
+}
+.contactus a{
+    
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.contactus :hover{
+    
+    color: #ffd60a;
+}
+
+
+    /* ===== HEADER ===== */
+    .header {
+      background: url('images/fabric-bg.jpg') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .header .overlay {
+      background: rgba(27, 58, 87, 0.8);
+      width: 100%;
+      height: 100%;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .header h1 {
+      font-size: 3.5rem;
+      font-weight: 600;
+      text-shadow: 2px 2px 5px #000;
+      text-align: center;
+    }
+
+    /* ===== CONTENT CARDS ===== */
+    .content-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 10%;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .content-card.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .content-card img {
+      width: 45%;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-card div {
+      flex: 1;
+    }
+
+    .content-card h2 {
+      font-size: 2rem;
+      color: #1b3a57;
+      margin-bottom: 20px;
+    }
+
+    .content-card p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    /* ===== HIGHLIGHT SECTION ===== */
+    .highlight {
+      background: rgba(255, 255, 255, 0.6);
+      margin: 40px 10%;
+      padding: 50px 30px;
+      border-left: 5px solid #1b3a57;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .highlight h2 {
+      font-size: 2rem;
+      color: #1b3a57;
+      margin-bottom: 15px;
+    }
+
+    .highlight p {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background-color: #0d1b2a;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+
+    .footer div {
+      flex: 1 1 250px;
+      max-width: 300px;
+    }
+
+    .logo2 img {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+
+    .logo2 p,
+    .office p,
+    .office2 p {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .links h2 {
+      margin-bottom: 10px;
+    }
+
+    .links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .links li {
+      margin-bottom: 8px;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .links a:hover {
+      color: #ffd60a;
+    }
+
+    .last {
+      background-color: #000814;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    /* ===== MOBILE RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px 20px;
+      }
+
+      .dropdown-content {
+        position: static;
+        width: 100%;
+        border: none;
+        box-shadow: none;
+      }
+
+      .menu a,
+      .dropdown button,
+      .invertors a,
+      .contactus a {
+        font-size: 16px;
+        display: block;
+        padding: 8px 0;
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+        padding: 0 10px;
+      }
+
+      .content-card {
+        flex-direction: column;
+        padding: 30px 20px;
+      }
+
+      .content-card img {
+        width: 100%;
+      }
+
+      .highlight {
+        margin: 30px 20px;
+        padding: 30px 20px;
+      }
+
+      .footer {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer div {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="logo"><a href="pashupati.html"><img src="pal_logo.png" alt="PAL Logo"></a></div>
+    <div class="menu"><a href="pashupati.html">Home</a></div>
+
+    <div class="dropdown">
+      <button onclick="toggleDropdown('productMenu')">Product</button>
+      <div id="productMenu" class="dropdown-content">
+        <a href="acrylic.html">Acrylic</a>
+        <a href="cppfilm.html">CPP Film</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button onclick="toggleDropdown('servicesMenu')">Services</button>
+      <div id="servicesMenu" class="dropdown-content">
+        <a href="research and dev.html">Research & Development</a>
+        <a href="PLANT.HTML">Plant</a>
+        <a href="TECHNOLOGY.html">Technology</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button onclick="toggleDropdown('featuresMenu')">Features</button>
+      <div id="featuresMenu" class="dropdown-content">
+        <a href="features.html">Human Resources</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button onclick="toggleDropdown('aboutMenu')">About</button>
+      <div id="aboutMenu" class="dropdown-content">
+        <a href="company profime.html">Company Profile</a>
+        <a href="career.html">Career</a>
+      </div>
+    </div>
+
+    <div class="invertors"><a href="#">Investors</a></div>
+    <div class="contactus"><a href="contactus.html">Contact Us</a></div>
+  </nav>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="overlay">
+      <h1 data-aos="fade-down">Company Profile</h1>
+    </div>
+  </header>
+
+  <!-- ===== CONTENT SECTIONS ===== -->
+  <section class="content-card" data-aos="fade-up">
+    <img src="fabrics-business.jpg" alt="Acrylic Fabric" />
+    <div>
+      <h2>About Acrylon Business</h2>
+      <p>We started commercial operations in 1990, in collaboration with SNIA BPD Italy of the FIAT group. Through constant development and innovation, we've reached 45,000 MT/year in acrylic fiber capacity.</p>
+      <p>We integrate technology, automation, and process control systems to ensure highly reliable, efficient operations.</p>
+    </div>
+  </section>
+
+  <section class="highlight" data-aos="zoom-in">
+    <h2>Wide Product Range</h2>
+    <p>Pasupati products span Denier (0.9–15.0), Cut lengths (38–150mm), Luster (Semi-dull to Super Bright), and Dyeing (Gel, Tow). They serve Sweaters, Blankets, Shawls, and Upholstery markets.</p>
+  </section>
+
+  <section class="content-card reverse" data-aos="fade-up">
+    <img src="whitecpp2.jpg" alt="CPP Film" />
+    <div>
+      <h2>About CPP Film Business</h2>
+      <p>With 10,000 MT/year capacity, our CPP Film Division features German and Italian machinery, meeting BRCGS hygiene standards.</p>
+      <p>Our films range from 15–80 microns, supporting bread packaging, anti-fog, medical grade, and peelable applications.</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="logo2">
+      <img src="pal_logo.png" alt="PAL Logo" />
+      <p>We are one of the leading producers of Acrylic fiber. We started commercial operations in 1990 with technical collaboration with SNIA BPD Italy.</p>
+    </div>
+
+    <div class="links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="ENVIRONMENTAL CLEARANCE.html">Environmental Clearance</a></li>
+        <li><a href="acrylic fiber.html">Acrylic Fiber</a></li>
+        <li><a href="maincpp.html">CPP Film</a></li>
+        <li><a href="ENVIRONMENT.HTML">Environment</a></li>
+        <li><a href="PLANT.HTML">Plant</a></li>
+        <li><a href="research and dev.html">Research & Development</a></li>
+        <li><a href="TECHNOLOGY.html">Technology</a></li>
+      </ul>
+    </div>
+
+    <div class="office">
+      <h3>Corporate Office</h3>
+      <p>M-14, Connaught Circus, New Delhi-110001</p>
+      <p>91-11-47627400<br>delhi@pasupatiacrylon.com<br>hrd@pasupatiacrylon.com</p>
+    </div>
+
+    <div class="office2">
+      <h3>Regd. Office & Works</h3>
+      <p>Kashipur Road, Thakurdwara-244601, Moradabad (U.P.)<br>works@pasupatiacrylon.com</p>
+      <p>Branch Office Ludhiana<br>mktgldh@pasupatiacrylon.com<br>91-161 5083473</p>
+    </div>
+  </footer>
+
+  <div class="last">
+    <p>Copyright © 2025 - Pasupati Acrylon</p>
+  </div>
+
+  <!-- ===== JS: DROPDOWN LOGIC ===== -->
+  <script>
+    function toggleDropdown(id) {
+      const dropdown = document.getElementById(id).parentElement;
+      dropdown.classList.toggle("active");
+
+      // Close other dropdowns
+      document.querySelectorAll('.dropdown').forEach(item => {
+        if (item !== dropdown) item.classList.remove('active');
+      });
+    }
+
+    // Close dropdown if clicked outside
+    window.onclick = function(event) {
+      if (!event.target.matches('button')) {
+        document.querySelectorAll('.dropdown').forEach(item => {
+          item.classList.remove('active');
+        });
+      }
+    }
+  </script>
+
+  <!-- ===== AOS LIBRARY ===== -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>
+

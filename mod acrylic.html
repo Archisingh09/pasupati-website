@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOD Acrylic</title>
+
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0%;
+        }
+
+        #navbar{
+    background-color: #0d1b2a;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    height:50px;
+}
+.logo{
+    margin-top: 13px;
+}
+.menu{
+    text-decoration: none;
+    margin-top: 13px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.menu :hover{
+    color: #ffd60a;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 13px;
+  font-size: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  margin-top: 10px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #fff;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
+button{
+    padding: 2px 4px;
+    cursor: pointer;
+    background-color: #0d1b2a;
+    color: white;
+    border: none;
+    font-size: 18px;
+}
+.dropdown  :hover{
+    color: #ffd60a;
+}
+
+
+.invertors{
+    margin-top: 13px;
+}
+.invertors a{
+       color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+.invertors :hover{
+    color: #ffd60a;
+}
+
+
+.contactus {
+    margin-top: 13px;
+    font-size: 20px;
+}
+.contactus a{
+    
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.contactus :hover{
+    
+    color: #ffd60a;
+}
+
+body{
+  background-color: #c9ada7;
+    border-radius: 12px;
+    font-family: Arial, sans-serif;
+}
+        .heading h1{
+
+            text-align: center;
+            background-color: #4a4e69;
+            height: 200px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 40px;
+      
+            
+        }
+        .mod{
+            border: 2px solid #000;
+            border-radius: 200px;
+            background-color: #9a8c98;
+            height: 150px;
+            width: 800px;
+            margin-left: 350px;
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .mod h2{
+            margin-top: 5px;
+            text-decoration: underline;
+
+        }
+
+        .mod p{
+            margin-top: 10px;
+            font-size: 20px;
+            
+            
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           
+        }
+
+   
+        
+        .application h1{
+            text-align: center;
+            margin-top: 80px;
+            height: 50px;
+            width: 500px;
+            background-color: #4a4e69;
+            margin-left: 500px;
+            border: 2px solid black;
+            border-radius: 15px;
+            padding: 8px 8px 8px 8px ;
+            text-align: center;
+
+            
+        }
+
+          #container{
+            display: flex;
+            justify-content: space-evenly;
+            border: 2px #22223b;
+            border-radius: 10px;
+            text-align: center;
+            
+        }
+
+        .box11{
+            border: 2px solid black;
+            border-radius: 12px;
+            margin-top: 50px;
+            background-color: #f2e9e4;
+            padding: 20px;
+        
+            
+        }
+        .app1 h2{
+            margin-top: 80px;
+            font-size: 40px;
+        }
+
+        .app1h h2{
+            margin-top: 40px;
+            background-color: #9a8c98;
+            padding: 10px;
+            border-radius: 100px;
+            border: 2px solid black;
+        }
+
+        .app1{
+            margin-top: 40px;
+        }
+
+        .app1 img{
+            height: 360px;
+            width: 370px;
+            border-radius: 12px;
+            margin-top: 10px;
+            border: 2px solid black;
+ 
+            
+        }
+        .app1 p{
+            
+            width: 370px;
+            text-align: left;
+            font-size: 23px;
+            margin-top: 7px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 12px;
+
+        }
+
+        .box2{
+            border: 2px solid black;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #f2e9e4;;
+        }
+
+        .app2h h2{
+         
+            margin-top: 40px;
+            background-color: #9a8c98;
+            padding: 10px;
+            border-radius: 100px;
+            border: 2px solid black;
+        }
+        
+
+        .app2{
+            margin-top: 50px;
+        }
+
+        .app2 #img1 img{
+            height: 360px;
+            width: 350px;
+            background-color: #006d77;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            border: 2px solid black;
+            
+        }
+        .app2 p{
+            width: 360px;
+            font-size: 20px;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .box3{
+            border: 2px solid black;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #f2e9e4;;
+        }
+
+        .app3h h2{
+            margin-top: 40px;
+            background-color: #9a8c98;
+            padding: 10px;
+            border-radius: 100px;
+            border: 2px solid black;
+        }
+        
+
+         .app3{
+            margin-top: 50px;
+        }
+        .app3 img{
+            height: 360px;
+            width: 380px;  
+            border-radius: 12px; 
+            border: 2px solid black; 
+            background-color: white;
+        }
+
+        .app3 p{
+            
+            width: 380px;
+            text-align: left;
+            font-size: 20px;
+            margin-top: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+    .table h2 {
+      margin-top: 40px;
+      border: 2px solid  black;
+      border-radius: 12px;
+      width: 700px;
+      padding: 8px;
+      display: block;
+      margin: 0 auto;
+      margin-top: 30px;
+      background-color: #4a4e69;
+      color: white;
+      text-align: center;
+    }
+
+    .table2 h2{
+        text-align: center;
+        margin-top: 40px;
+        border: 2px solid  black;
+        border-radius: 12px;
+        width: 700px;
+        padding: 8px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+        
+      background-color: #4a4e69;
+      color: white;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px auto;
+      max-width: 1000px;
+    }
+
+    th, td {
+      border: 1px solid #000;
+      padding: 10px;
+      text-align: center;
+      vertical-align: middle;
+      background-color: #f2e9e4;
+    }
+
+    th {
+      background-color: #4a4e69;
+      font-weight: bold;
+    }
+
+    .footer {
+  background-color: #0d1b2a;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.footer div {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.logo2 img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.logo2 p,
+.office p,
+.office2 p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.links h2 {
+  margin-bottom: 10px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 8px;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.links a:hover {
+  color: #ffd60a;
+}
+
+.last {
+  background-color: #000814;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ✅ Responsive Fixes */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+
+         <div>
+        <div id="navbar"> 
+            <div class="logo">
+                <a href="pashupati.html"><img src="pal_logo.png" alt=""> </a>
+            
+            
+            </div>
+
+            <div class="menu"> <a href="pashupati.html">Home </a></div>
+
+            <div class="dropdown">
+  <button onclick="toggleDropdown('productMenu')">Product</button>
+  <div id="productMenu" class="dropdown-content">
+    <a href="acrylic.html">Acrylic</a>
+    <a href="cppfilm.html">CPP Film</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('servicesMenu')">Services</button>
+  <div id="servicesMenu" class="dropdown-content">
+    <a href="research and dev.html">Research and Development</a>
+    <a href="PLANT.HTML">Plant</a>
+    <a href="TECHNOLOGY.html">Technology</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('featuresMenu')">Features</button>
+  <div id="featuresMenu" class="dropdown-content">
+    <a href="features.html">Human Resources</a>
+    <!-- <a href="policy.html">HR Policy</a>
+    <a href="activity.html">Major Activity</a> -->
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('aboutMenu')">About</button>
+  <div id="aboutMenu" class="dropdown-content">
+    <a href="company profime.html">Company Profile</a>
+    <a href="career.html">Career</a>
+  </div>
+</div>
+
+
+            <div class="invertors"> <a href="">Invesrtors </a></div>
+            <div class="contactus"> <a href="contactus.html"> Contact Us</a> </div>
+            <!-- <div class="search">
+                <input placeholder="search..">
+            </div> -->
+        </div>
+    </div>
+
+  
+    <div class="heading">
+
+    <h1>PASUPATI MODACRYLIC FIBER </h1>
+
+    </div>
+
+    <div class="mod">
+
+    <h2>MOD Acrylic </h2>
+   
+    <div class="intro">
+<!--         
+        <img src="mod acrylic.webp" alt=""> -->
+
+        <p>The generic name of a fiber that has a lower acrylonitrile (35-85%) level than normal acrylic fiber in its make-up.
+Pasupati Mod-acrylic fiber developed by PASUPATI ACRYLON LTD (SNIA TECHNOLOGY) that possesses the excellent flame retardancy
+ as well as acrylic fibers natural attributes of softness and dyeability.
+</p>
+    </div>
+    </div>
+
+
+    <div class="application">
+        <h1> Application Of Mod-acrylic Fiber</h1>
+
+    </div>
+    <div id="container"> 
+
+        
+        <div class="box11">
+
+        <div class="app1h">
+              <h2>1. Protective Clothing</h2>
+        </div>
+
+        <div class="app1">
+            
+             <img src="1676630464.jpg" alt="">
+             <!-- <div class="cloths">
+                <img src="c:\Users\archi\OneDrive\Desktop\Mod Acrylic\8812be4076c4bc7df4917eb02398d34d.webp" alt=""></div> -->
+          
+            <p>Flame retardancy and self extinguishing ability as well as resistance against chemicals, protects
+   Industrial workers from any injuries.
+
+        <!-- <br> Mod Acrylic fiber possess unique quantities that make it a perfect fit for wide range of industrial clothing and interior goods application.
+       Mod Acrylic fiber is light, soft, warm & flexible due to its unique fiber form. -->
+
+</p>
+        </div>
+
+        </div>
+
+        <div class="box2">
+
+    <div class="app2h">
+        <h2>  2. Hair extensions and wigs</h2>
+    
+
+    <div class="app2">
+        <div id="img1">
+            
+            <img src="water-wave_crochet_hair_with_feather_finish_for_afro_textures.jpg" alt="">
+        </div>
+
+       <!-- <div id="img2">
+            
+            <img src="c:\Users\archi\OneDrive\Desktop\Mod Acrylic\pure-curly-1.webp" alt="">
+        </div>  -->
+
+        <p>Mod Acrylic is also used as a realistic alternative to human hair in making of hair extensions, wigs 
+and doll hairs.
+
+</p>
+    </div>
+    </div>
+        </div>
+        <div class="box3">
+
+        <div class="app3h">
+              <h2>3.Battery material:</h2>
+        
+
+        <div class="app3">
+            
+             <img src="img-lithium-blue-header-product-image.png" alt="">
+          
+            <p>It is used in electrodes of lead –acid batteries, alkali batteries and parts of separators</p>
+        
+        </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+    <div class="table">
+  <h2>Mod Acrylic Products Specifications</h2>
+    </div>
+  <table>
+    <tr>
+      <th>Properties</th>
+      <th>1.5D BRIGHT<br>LOI-26</th>
+      <th>2.0D BRIGHT<br>LOI-26</th>
+      <th>3.0D BRIGHT<br>LOI-26</th>
+      <th>5.0D BRIGHT<br>LOI-26</th>
+      <th>11.0D BRIGHT<br>LOI-26</th>
+      <th>15.0D BRIGHT<br>LOI-26</th>
+    </tr>
+    <tr>
+      <td>Denier</td>
+      <td>1.5±0.15</td>
+      <td>2.0±0.20</td>
+      <td>3.0±0.30</td>
+      <td>5.0±0.5</td>
+      <td>11.0±1.10</td>
+      <td>15.0±1.50</td>
+    </tr>
+    <tr>
+      <td><b>Tenacity(g/d)</b></td>
+      <td>>2.5</td>
+      <td>>2.5</td>
+      <td>>2.5</td>
+      <td>>2.3</td>
+      <td>>2.0</td>
+      <td>>2.0</td>
+    </tr>
+    <tr>
+      <td>%Elongation</td>
+      <td>35.0±7.0</td>
+      <td>38.0±7.0</td>
+      <td>38.0±7.0</td>
+      <td>40.0±7.0</td>
+      <td>42.0±7.0</td>
+      <td>43.0±7.0</td>
+    </tr>
+    <tr>
+      <td>%Shrinkage</td>
+      <td>2.5.</td>
+      <td>2.5.</td>
+      <td>2.5.</td>
+      <td>2.5.</td>
+      <td>2.5.</td>
+      <td>2.5.</td>
+    </tr>
+    <tr>
+      <td>%Moisture</td>
+      <td>2.5.</td>
+      <td>2.5.</td>
+      <td>2.5.</td>
+      <td>2.5.</td>
+      <td>2.5.</td>
+      <td>2.5.</td>
+    </tr>
+    <tr>
+      <td>Crimp/cm</td>
+      <td>4.5±0.5</td>
+      <td>4.0±0.5</td>
+      <td>3.5±0.50</td>
+      <td>3.3±0.5</td>
+      <td>2.8±0.50</td>
+      <td>2.3±0.50</td>
+    </tr>
+  </table>
+
+  <div class="table2">
+
+  <h2>Mod Acrylic Products Specifications</h2>
+  </div>
+  <table>
+    <tr>
+      <th>Properties</th>
+      <th>1.5D DULL<br>LOI-33</th>
+      <th>2.0D DULL<br>LOI-33</th>
+    </tr>
+    <tr>
+      <td>Denier</td>
+      <td>1.5±0.15</td>
+      <td>2.0±0.20</td>
+    </tr>
+    <tr>
+      <td><b>Tenacity(g/d)</b></td>
+      <td>>2.5</td>
+      <td>>2.5</td>
+    </tr>
+    <tr>
+      <td>%Elongation</td>
+      <td>35.0±7.0</td>
+      <td>38.0±7.0</td>
+    </tr>
+    <tr>
+      <td>%Shrinkage</td>
+      <td>2.5.</td>
+      <td>2.5.</td>
+    </tr>
+    <tr>
+      <td>%Moisture</td>
+      <td>2.5.</td>
+      <td>2.5.</td>
+    </tr>
+    <tr>
+      <td>Crimp/cm</td>
+      <td>4.5±0.5</td>
+      <td>4.0±0.5</td>
+    </tr>
+  </table>
+
+  <div class="footer">
+  <div class="logo2">
+    <img src="pal_logo.png" alt="PAL Logo" />
+    <p>
+      We are one of the leading producers of Acrylic fiber. We started commercial operations in 1990 with technical collaboration with SNIA BPD Italy.
+    </p>
+  </div>
+
+  <div class="links">
+    <h2>Quick Links</h2>
+    <ul>
+      <li><a href="ENVIRONMENTAL CLEARANCE.html">Environmental Clearance</a></li>
+      <li><a href="acrylic fiber.html">Acrylic Fiber</a></li>
+      <li><a href="maincpp.html">CPP Film</a></li>
+      <li><a href="ENVIRONMENT.HTML">Environment</a></li>
+      <li><a href="PLANT.HTML">Plant</a></li>
+      <li><a href="research and dev.html">Research and Development</a></li>
+      <li><a href="TECHNOLOGY.html">Technology</a></li>
+    </ul>
+  </div>
+
+  <div class="office">
+    <h3>Corporate Office</h3>
+    <p>M-14, Connaught Circus, New Delhi-110001</p>
+    <p>91-11-47627400<br>delhi@pasupatiacrylon.com<br>hrd@pasupatiacrylon.com</p>
+  </div>
+
+  <div class="office2">
+    <h3>Regd. Office & Works</h3>
+    <p>Kashipur Road, Thakurdwara-244601, Moradabad (U.P.)<br>works@pasupatiacrylon.com</p>
+    <p>Branch Office Ludhiana<br>mktgldh@pasupatiacrylon.com<br>91-161 5083473</p>
+  </div>
+</div>
+
+<div class="last">
+  <p>Copyright © 2025 - Pasupati Acrylon</p>
+</div>
+
+    <script src="pashupati.js">pashupati.js</script>
+</body>
+</html>
+    

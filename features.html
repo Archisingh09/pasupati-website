@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Human Resources & Development</title>
+ <style>
+    /* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#navbar{
+    background-color: #0d1b2a;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    height:50px;
+}
+.logo{
+    margin-top: 13px;
+}
+.menu{
+    text-decoration: none;
+    margin-top: 13px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.menu :hover{
+    color: #ffd60a;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 13px;
+  font-size: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  margin-top: 10px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #fff;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
+button{
+    padding: 2px 4px;
+    cursor: pointer;
+    background-color: #0d1b2a;
+    color: white;
+    border: none;
+    font-size: 18px;
+}
+.dropdown  :hover{
+    color: #ffd60a;
+}
+
+
+.invertors{
+    margin-top: 13px;
+}
+.invertors a{
+       color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+.invertors :hover{
+    color: #ffd60a;
+}
+
+
+.contactus {
+    margin-top: 13px;
+    font-size: 20px;
+}
+.contactus a{
+    
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.contactus :hover{
+    
+    color: #ffd60a;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+/* Section Wrapper */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* Two Column Layout */
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.two-column img {
+  flex: 1 1 45%;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  height: 400px;
+  width: 500px;
+}
+.two-column div {
+  flex: 1 1 50%;
+}
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Headings & Paragraphs */
+.section h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 15px;
+}
+.section p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Icon Grid Section */
+.policy-icons {
+  text-align: center;
+}
+.policy-icons h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+.policy-icons p {
+  color: #666;
+}
+.policy-icons .icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+.policy-icons .icons div {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  max-width: 280px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.policy-icons .icons div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+.policy-icons img {
+  width: 60px;
+  margin-bottom: 15px;
+  filter: brightness(0) saturate(100%) invert(30%) sepia(80%) saturate(1000%) hue-rotate(190deg);
+}
+.policy-icons h3 {
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+.footer {
+  background-color: #0d1b2a;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.footer div {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.logo2 img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.logo2 p,
+.office p,
+.office2 p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.links h2 {
+  margin-bottom: 10px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 8px;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.links a:hover {
+  color: #ffd60a;
+}
+
+.last {
+  background-color: #000814;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ✅ Responsive Fixes */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+ </style>
+</head>
+<body>
+    <div>
+        <div id="navbar"> 
+            <div class="logo">
+                <a href="pashupati.html"><img src="pal_logo.png" alt=""> </a>
+            
+            
+            </div>
+
+            <div class="menu"> <a href="pashupati.html">Home </a></div>
+
+            <div class="dropdown">
+  <button onclick="toggleDropdown('productMenu')">Product</button>
+  <div id="productMenu" class="dropdown-content">
+    <a href="acrylic.html">Acrylic</a>
+    <a href="cppfilm.html">CPP Film</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('servicesMenu')">Services</button>
+  <div id="servicesMenu" class="dropdown-content">
+    <a href="research and dev.html">Research and Development</a>
+    <a href="PLANT.HTML">Plant</a>
+    <a href="TECHNOLOGY.html">Technology</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('featuresMenu')">Features</button>
+  <div id="featuresMenu" class="dropdown-content">
+    <a href="features.html">Human Resources</a>
+    <!-- <a href="policy.html">HR Policy</a>
+    <a href="activity.html">Major Activity</a> -->
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('aboutMenu')">About</button>
+  <div id="aboutMenu" class="dropdown-content">
+    <a href="company profime.html">Company Profile</a>
+    <a href="career.html">Career</a>
+  </div>
+</div>
+
+
+            <div class="invertors"> <a href="">Invesrtors </a></div>
+            <div class="contactus"> <a href="contactus.html"> Contact Us</a> </div>
+            <!-- <div class="search">
+                <input placeholder="search..">
+            </div> -->
+        </div>
+    </div>
+
+
+  <!-- Header -->
+  <section class="hero">
+    <h1>Human Resources & Development</h1>
+  </section>
+
+  <!-- Section 1 -->
+  <section class="section two-column">
+    <img src="teamphoto.jpg" alt="Team photo">
+    <div>
+      <h2>Not Just a Resource – an Asset</h2>
+      <p><strong>Pasupati’s greatest strength is its Dedicated Workforce</strong></p>
+      <p>Committed to producing only the best, this team comprises of trained engineers, experienced supervisors, technicians and expert managerial staff. Their skills and knowledge are regularly upgraded and periodically evaluated, to ensure that each one of them keeps up to the times.</p>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="section policy-icons">
+    <h2>Lead and Facilitate Continuous Change towards Organizational Excellence</h2>
+    <p>Create a learning and vibrant organization with high sense of pride amongst its members</p>
+    <div class="icons">
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/128/3024/3024605.png" alt="Policy icon" />
+        <h3>Human Resource Policy</h3>
+        <p>Brings sustained growth, organizational effectiveness and individual satisfaction.</p>
+      </div>
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/128/10512/10512812.png" alt="Star icon" />
+        <h3>Identifying star performers</h3>
+        <p>Ascertain where employees need help to deliver their best.</p>
+      </div>
+      <div>
+        <img src="https://cdn-icons-png.flaticon.com/128/1159/1159633.png" alt="Productivity icon" />
+        <h3>Quality and productivity</h3>
+        <p>Employees work with independence toward goals and philosophies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section class="section two-column reverse">
+    <div>
+      <h2>Our Human Resource Policy</h2>
+      <p>Human resource management in the company has assumed greater importance for bringing about sustained growth, organizational effectiveness and individual satisfaction. The company believes that the personnel policies should be dynamic and adaptive to create proper working environment.</p>
+      <p>The employees are encouraged to work and think independently in furtherance of the company’s objectives and philosophies. The company also has different training and development programmes. The role of the training is not only to update the knowledge of the employees but also to develop them to assume higher responsibilities in course of time.</p>
+    </div>
+    <img src="team2.jpg" alt="Policy Image">
+  </section>
+
+  <!-- Section 4 -->
+  <section class="section two-column">
+    <img src="start-performer-1536x1200.jpg" alt="Star Performer">
+    <div>
+      <h2>Identifying Star Performers</h2>
+      <p><strong>Training for upgrading skills, knowledge and mental abilities</strong></p>
+      <p>A scientifically designed and tested appraisal system is in place to assess the performance and potential of each employee. It helps in identifying star performers for suitable raise and growth. It also helps to ascertain the areas where employees need help and improvement to put forth their best performance.</p>
+      <p>The focus on the human resources has made Pasupati Acrylon unique among all organisations in the location and a leader in the industry in terms of quality and productivity. Due to employee oriented Human Relation Policies, majority of our employees are working for decades in the organization as Pasupati family.</p>
+    </div>
+  </section>
+
+ <div class="footer">
+  <div class="logo2">
+    <img src="pal_logo.png" alt="PAL Logo" />
+    <p>
+      We are one of the leading producers of Acrylic fiber. We started commercial operations in 1990 with technical collaboration with SNIA BPD Italy.
+    </p>
+  </div>
+
+  <div class="links">
+    <h2>Quick Links</h2>
+    <ul>
+      <li><a href="ENVIRONMENTAL CLEARANCE.html">Environmental Clearance</a></li>
+      <li><a href="acrylic fiber.html">Acrylic Fiber</a></li>
+      <li><a href="maincpp.html">CPP Film</a></li>
+      <li><a href="ENVIRONMENT.HTML">Environment</a></li>
+      <li><a href="PLANT.HTML">Plant</a></li>
+      <li><a href="research and dev.html">Research and Development</a></li>
+      <li><a href="TECHNOLOGY.html">Technology</a></li>
+    </ul>
+  </div>
+
+  <div class="office">
+    <h3>Corporate Office</h3>
+    <p>M-14, Connaught Circus, New Delhi-110001</p>
+    <p>91-11-47627400<br>delhi@pasupatiacrylon.com<br>hrd@pasupatiacrylon.com</p>
+  </div>
+
+  <div class="office2">
+    <h3>Regd. Office & Works</h3>
+    <p>Kashipur Road, Thakurdwara-244601, Moradabad (U.P.)<br>works@pasupatiacrylon.com</p>
+    <p>Branch Office Ludhiana<br>mktgldh@pasupatiacrylon.com<br>91-161 5083473</p>
+  </div>
+</div>
+
+<div class="last">
+  <p>Copyright © 2025 - Pasupati Acrylon</p>
+</div>
+
+    <script src="pashupati.js">pashupati.js</script>
+</body>
+</html>
+

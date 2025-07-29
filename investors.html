@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investors</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .header{
+            height: 300px;
+            background: linear-gradient(to right, #9f86c0,#5e548e,#231942);
+        }
+        .header h1{
+                text-align: center;
+
+        }
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 12px 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sidebar li:hover {
+  background-color: #e6e6e6;
+}
+
+.sidebar .active {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.content h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.content h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.notices li {
+  margin-bottom: 12px;
+  padding-left: 15px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.notices li::before {
+  content: '➤';
+  position: absolute;
+  left: 0;
+  color: #333;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Hide all sections by default */
+.section {
+  display: none;
+}
+
+/* Show active section */
+.section.visible {
+  display: block;
+}
+
+.sidebar li i {
+  margin-right: 8px;
+  width: 18px;
+  text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Investors</h1>
+    </div>
+
+    <div class="container">
+    <aside class="sidebar">
+      <li onclick="showSection('board')" class="active"><i class="fas fa-users"></i> Board Of Directors</li>
+        <li onclick="showSection('financial')"><i class="fas fa-file-invoice-dollar"></i> Financial Information</li>
+        <li onclick="showSection('shareholding')"><i class="fas fa-chart-pie"></i> Shareholding Pattern</li>
+        <li onclick="showSection('code')"><i class="fas fa-gavel"></i> Code of Conduct</li>
+        <li onclick="showSection('policies')"><i class="fas fa-scroll"></i> Policies</li>
+        <li onclick="showSection('annual')"><i class="fas fa-calendar-check"></i> Annual Return</li>
+        <li onclick="showSection('investor')"><i class="fas fa-user-tie"></i> Investor Centre</li>
+        <li onclick="showSection('committee')"><i class="fas fa-sitemap"></i> Committees</li>
+        <li onclick="showSection('governance')"><i class="fas fa-balance-scale"></i> Corporate Governance</li>
+        <li onclick="showSection('grievance')"><i class="fas fa-exclamation-circle"></i> Investors Grievances</li>
+        <li onclick="showSection('stock')"><i class="fas fa-building-columns"></i> Stock Exchange</li>
+        <li onclick="showSection('press')"><i class="fas fa-newspaper"></i> Press & Publication</li>
+        <li onclick="showSection('compliance')"><i class="fas fa-file-contract"></i> Compliance Report</li>
+      </ul>
+    </aside>
+
+
+    <main class="content">
+      <section id="board" class="section visible">
+        <h2>Board Of Directors</h2>
+        <p>
+          <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" width="20">
+          <a href="https://pasupatiacrylon.com/wp-content/uploads/2025/04/Brief-Profile-of-BOD.pdf" target="_blank">
+            Brief Profile of Board Of Directors
+          </a>
+        </p>
+      </section>
+
+      <section id="financial" class="section">
+        <h2>Financial Information</h2>
+     <h3>Notice Of Board Meeting</h3>
+    <ul   class="notices">
+                <li>
+                    <a href="Notice of Board Meeting to Consider and Approve the Audited Financial Results for the Quarter and Year ended 31st March, 2025.pdf">Notice of Board Meeting to Consider and Approve the Audited Financial Results for the Quarter and Year ended 31st March, 2025</a></li>
+          <li> <a href="Revised-Board-Meeting-Intimation_12.02.2025.pdf">Intimation For Rescheduling of Board Meeting </a></li>
+          <li><a href="Notice-of-Board-Meeting_10.02.2025.pdf">Notice of Board Meeting to Consider and Approve Un-audited Financial Results for the Quarter and Nine months ended 31st December, 2024 </a></li>
+          <li> <a href="Notice of Board Meeting to Consider and Approve the Audited Financial Results for the Quarter and Year ended 31st March, 2025.pdf">Notice of Board Meeting to Consider and Approve the Un-audited Financial Results for the Quarter and Half Year Ended 30th September 2024 </a></li>
+          <li> <a href="5.pdf">Notice of Board Meeting to consider and approve Un-audited Financial Results for Quarter ended 30th June 2024 </a></li>
+          <li> <a href="6.pdf">Notice Of Board Meeting to Consider the Audited Financial Results for the Quarter and Year Ended 31st March 2024 </a></li>
+          <li> <a href="7.pdf">Notice Of Board Meeting to Consider Un-audited Financial Results for Quarter & Nine Months Ended 31.12.2023</a></li>
+          <li> <a href="8.pdf">Notice of Board Meeting to consider Un-audited Financial Results for quarter & half year ended 30.09.2023 </a></li>
+          <li><a href="9.pdf">Board Meeting Notice to consider Un-audited Financial Results for quarter ended 30.06.2023 </a></li>
+          <li><a href="10.pdf">Notice Of Board Meeting Scheduled to be Held on 9-05-2023</a></li>
+          <li><a href="11.pdf">Notice Of Board Meeting Scheduled to be Held on 2-02-2023</a></li>
+          <li><a href="12.pdf">Notice Of Board Meeting Scheduled to be Held on 9-05-2023</a></li>
+          <li><a href="10.pdf">Notice Of Board Meeting Scheduled to be Held on 9-05-2023</a></li>
+          <li><a href="10.pdf">Notice Of Board Meeting Scheduled to be Held on 9-05-2023</a></li>
+        </ul>
+      </section>
+
+      <section id="shareholding" class="section">
+        <h2>Shareholding Pattern</h2>
+        <ul class="notices">
+
+           <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" width="20">
+          <a href="https://pasupatiacrylon.com/wp-content/uploads/2025/04/Brief-Profile-of-BOD.pdf" target="_blank">
+            
+          <a href="https://pasupatiacrylon.com/wp-content/uploads/2025/04/Brief-Profile-of-BOD.pdf" target="_blank">
+          <a href="https://pasupatiacrylon.com/wp-content/uploads/2025/04/Brief-Profile-of-BOD.pdf" target="_blank">
+          <a href="https://pasupatiacrylon.com/wp-content/uploads/2025/04/Brief-Profile-of-BOD.pdf" target="_blank">
+          <a href="https://pasupatiacrylon.com/wp-content/uploads/2025/04/Brief-Profile-of-BOD.pdf" target="_blank">
+          <a href="https://pasupatiacrylon.com/wp-content/uploads/2025/04/Brief-Profile-of-BOD.pdf" target="_blank">
+          <a href="https://pasupatiacrylon.com/wp-content/uploads/2025/04/Brief-Profile-of-BOD.pdf" target="_blank">
+          <a href="https://pasupatiacrylon.com/wp-content/uploads/2025/04/Brief-Profile-of-BOD.pdf" target="_blank">
+          <a href="https://pasupatiacrylon.com/wp-content/uploads/2025/04/Brief-Profile-of-BOD.pdf" target="_blank">
+          <a href="https://pasupatiacrylon.com/wp-content/uploads/2025/04/Brief-Profile-of-BOD.pdf" target="_blank">
+          <a href="https://pasupatiacrylon.com/wp-content/uploads/2025/04/Brief-Profile-of-BOD.pdf" target="_blank">
+
+        </ul>
+      </section>
+
+      <section id="code" class="section">
+        <h2>Code of Conduct</h2>
+        <p>Details coming soon...</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('visible'));
+
+      const target = document.getElementById(id);
+      if (target) target.classList.add('visible');
+
+      const items = document.querySelectorAll('.sidebar li');
+      items.forEach(item => item.classList.remove('active'));
+
+      const clickedItem = [...items].find(item => item.innerText.toLowerCase().includes(id.replace('-', '')));
+      if (clickedItem) clickedItem.classList.add('active');
+    }
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('visible'));
+      document.getElementById(id)?.classList.add('visible');
+
+      document.querySelectorAll('.sidebar li').forEach(li => li.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+</body>
+</html>

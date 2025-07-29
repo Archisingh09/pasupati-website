@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acrylic Tow</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+#navbar{
+    background-color: #0d1b2a;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    height:50px;
+}
+.logo{
+    margin-top: 13px;
+}
+.menu{
+    text-decoration: none;
+    margin-top: 13px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.menu :hover{
+    color: #ffd60a;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 13px;
+  font-size: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  margin-top: 10px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #fff;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
+button{
+    padding: 2px 4px;
+    cursor: pointer;
+    background-color: #0d1b2a;
+    color: white;
+    border: none;
+    font-size: 18px;
+}
+.dropdown  :hover{
+    color: #ffd60a;
+}
+
+
+.invertors{
+    margin-top: 13px;
+}
+.invertors a{
+       color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+.invertors :hover{
+    color: #ffd60a;
+}
+
+
+.contactus {
+    margin-top: 13px;
+    font-size: 20px;
+}
+.contactus a{
+    
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.contactus :hover{
+    
+    color: #ffd60a;
+}
+
+header {
+  background: #0073aa;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+  height: 130px;
+
+
+}
+#intro{
+    display: flex;
+    justify-content: space-evenly;
+}
+#intro img{
+    height: 300px;
+    width: 300px;
+}
+
+.intro {
+    margin-left: 30px;
+} 
+
+.intro p{
+    
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+section {
+  padding: 20px;
+  background: #fff;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.table-section {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.table-section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+
+
+ul {
+  padding-left: 30px;
+}
+
+li{
+    margin-top: 10px;
+}
+#advantages h2{
+    padding-left: 30px;
+}
+#applications h2{
+    padding-left: 30px;
+}
+#applications p{
+    padding-left: 30px;
+}
+
+img {
+  max-width: 1000px;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.table-section {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.table-section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 900px;
+  border-collapse: collapse;
+  margin: 0 auto 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+thead th {
+  background-color: #0073aa;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.1rem;
+  
+  border: 1px solid black;
+}
+
+tbody td,
+tbody th {
+  border: 1px solid #0073aa;
+  padding: 10px;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #dbe5ff;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: #0d1b2a;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.footer div {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.logo2 img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.logo2 p,
+.office p,
+.office2 p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.links h2 {
+  margin-bottom: 10px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 8px;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.links a:hover {
+  color: #ffd60a;
+}
+
+.last {
+  background-color: #000814;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ✅ Responsive Fixes */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+    <div>
+        <div id="navbar"> 
+            <div class="logo">
+                <a href="pashupati.html"><img src="pal_logo.png" alt=""> </a>
+            
+            
+            </div>
+
+            <div class="menu"> <a href="pashupati.html">Home </a></div>
+
+            <div class="dropdown">
+  <button onclick="toggleDropdown('productMenu')">Product</button>
+  <div id="productMenu" class="dropdown-content">
+    <a href="acrylic.html">Acrylic</a>
+    <a href="cppfilm.html">CPP Film</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('servicesMenu')">Services</button>
+  <div id="servicesMenu" class="dropdown-content">
+    <a href="research and dev.html">Research and Development</a>
+    <a href="PLANT.HTML">Plant</a>
+    <a href="TECHNOLOGY.html">Technology</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('featuresMenu')">Features</button>
+  <div id="featuresMenu" class="dropdown-content">
+    <a href="features.html">Human Resources</a>
+    <!-- <a href="policy.html">HR Policy</a>
+    <a href="activity.html">Major Activity</a> -->
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('aboutMenu')">About</button>
+  <div id="aboutMenu" class="dropdown-content">
+    <a href="company profime.html">Company Profile</a>
+    <a href="career.html">Career</a>
+  </div>
+</div>
+
+
+            <div class="invertors"> <a href="">Invesrtors </a></div>
+            <div class="contactus"> <a href="contactus.html"> Contact Us</a> </div>
+            <!-- <div class="search">
+                <input placeholder="search..">
+            </div> -->
+        </div>
+    </div>
+
+  <header>
+    <h1>Acrylic Tow</h1>
+    <p>High-quality synthetic fiber used in textiles and more</p>
+  </header>
+
+  <section id="intro">
+    <div class="intro" style="width: 450px;">
+    <h2>What is Acrylic Tow?</h2>
+    <p>Acrylic Tow is a form of acrylic fiber, often used in the production of yarn,
+         textiles, and industrial materials. It is known for its softness, warmth, and 
+         resistance to chemicals and sunlight.</p>
+    </div>
+    <img src="download-1.jpg" alt="Acrylic Tow" />
+  </section>
+
+  <section id="advantages">
+    <h2>Advantages of Acrylic Tow</h2>
+    <ul>
+      <li>Lightweight and soft</li>
+      <li>Resistant to UV and chemicals</li>
+      <li>Quick drying</li>
+      <li>Used in knitting, weaving, and industrial processes</li>
+    </ul>
+  </section>
+
+  <section id="applications">
+    <h2>Applications</h2>
+    <p>Acrylic Tow is used in:</p>
+    <ul>
+      <li>Textile yarns</li>
+      <li>Wool replacement products</li>
+      <li>Wigs and hair extensions</li>
+      <li>Blankets and carpets</li>
+    </ul>
+  </section>
+
+  <section class="table-section">
+    <h2>Acrylic Tow Properties</h2>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">ACRYLIC TOW</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Denier</td>
+          <td>0.9 to 15</td>
+        </tr>
+        <tr>
+          <td>Weight per meter (Kilo-Tex)</td>
+          <td>110-130</td>
+        </tr>
+        <tr>
+          <td>Luster</td>
+          <td>Bright / Semi Dull</td>
+        </tr>
+        <tr>
+          <td>Characteristics</td>
+          <td>Regular, Shrinkable</td>
+        </tr>
+        <tr>
+          <td>Packing</td>
+          <td>HDPE Bales of 400±10Kg</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="table-section">
+    <h2>Properties of Acrylic Staple Fiber</h2>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Properties</th>
+          <th colspan="7">Type</th>
+        </tr>
+        <tr>
+          <th>Properties</th>
+          <th>Units</th>
+          <th>0.9</th>
+          <th>1.2</th>
+          <th>1.5</th>
+          <th>2</th>
+          <th>3</th>
+          <th>5</th>
+          <th>7</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fineness</td>
+          <td>Denier</td>
+          <td>0.9</td>
+          <td>1.2</td>
+          <td>1.5</td>
+          <td>2</td>
+          <td>3</td>
+          <td>5</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>Tenacity</td>
+          <td>gm/denier</td>
+          <td>less than 3.5</td>
+          <td>less than 3.2</td>
+          <td>less than 3.0</td>
+          <td>less than 3.0</td>
+          <td>less than 2.8</td>
+          <td>less than 2.6</td>
+          <td>less than 2.5</td>
+        </tr>
+        <tr>
+          <td>Weight per meter</td>
+          <td>Ktex (NKT)</td>
+          <td>108±3</td>
+          <td>109±3</td>
+          <td>110±3</td>
+          <td>122±4</td>
+          <td>122±4</td>
+          <td>122±4</td>
+          <td>122±4</td>
+        </tr>
+        <tr>
+          <td>Elongation</td>
+          <td>(%)</td>
+          <td>32±5</td>
+          <td>32±5</td>
+          <td>38±7</td>
+          <td>40±7</td>
+          <td>40±7</td>
+          <td>40±7</td>
+          <td>40±7</td>
+        </tr>
+        <tr>
+          <td>(Shrinkable)</td>
+          <td>(%)</td>
+          <td>less than 2.5</td>
+          <td>less than 2.5</td>
+          <td>less than 2.5</td>
+          <td>less than 3.0</td>
+          <td>less than 3.0</td>
+          <td>less than 3.5</td>
+          <td>less than 3.5</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+ 
+     <div class="footer">
+  <div class="logo2">
+    <img src="pal_logo.png" alt="PAL Logo" />
+    <p>
+      We are one of the leading producers of Acrylic fiber. We started commercial operations in 1990 with technical collaboration with SNIA BPD Italy.
+    </p>
+  </div>
+
+  <div class="links">
+    <h2>Quick Links</h2>
+    <ul>
+      <li><a href="ENVIRONMENTAL CLEARANCE.html">Environmental Clearance</a></li>
+      <li><a href="acrylic fiber.html">Acrylic Fiber</a></li>
+      <li><a href="maincpp.html">CPP Film</a></li>
+      <li><a href="ENVIRONMENT.HTML">Environment</a></li>
+      <li><a href="PLANT.HTML">Plant</a></li>
+      <li><a href="research and dev.html">Research and Development</a></li>
+      <li><a href="TECHNOLOGY.html">Technology</a></li>
+    </ul>
+  </div>
+
+  <div class="office">
+    <h3>Corporate Office</h3>
+    <p>M-14, Connaught Circus, New Delhi-110001</p>
+    <p>91-11-47627400<br>delhi@pasupatiacrylon.com<br>hrd@pasupatiacrylon.com</p>
+  </div>
+
+  <div class="office2">
+    <h3>Regd. Office & Works</h3>
+    <p>Kashipur Road, Thakurdwara-244601, Moradabad (U.P.)<br>works@pasupatiacrylon.com</p>
+    <p>Branch Office Ludhiana<br>mktgldh@pasupatiacrylon.com<br>91-161 5083473</p>
+  </div>
+</div>
+
+<div class="last">
+  <p>Copyright © 2025 - Pasupati Acrylon</p>
+</div>
+
+    <script src="pashupati.js">pashupati.js</script>
+</body>
+</html>

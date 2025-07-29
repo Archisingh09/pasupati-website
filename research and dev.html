@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research and Development</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+#navbar{
+    background-color: #0d1b2a;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    height:50px;
+}
+.logo{
+    margin-top: 13px;
+}
+.menu{
+    text-decoration: none;
+    margin-top: 13px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.menu :hover{
+    color: #ffd60a;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 13px;
+  font-size: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  margin-top: 10px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #fff;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
+button{
+    padding: 2px 4px;
+    cursor: pointer;
+    background-color: #0d1b2a;
+    color: white;
+    border: none;
+    font-size: 18px;
+}
+.dropdown  :hover{
+    color: #ffd60a;
+}
+
+
+.invertors{
+    margin-top: 13px;
+}
+.invertors a{
+       color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+.invertors :hover{
+    color: #ffd60a;
+}
+
+
+.contactus {
+    margin-top: 13px;
+    font-size: 20px;
+}
+.contactus a{
+    
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.contactus :hover{
+    
+    color: #ffd60a;
+}
+
+.header1 {
+  background: linear-gradient(to right,#415a77,#1b263b,#14213d);
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+  height: 150px;
+  font-size: 30px;
+
+
+}
+.box1{
+    justify-content: space-evenly;
+    margin-top: 60px;
+    
+}
+.box11 {
+    width: 600px;
+    font-size: 20px;
+    padding: 30px;
+}
+.box11 p{
+    width: 500px;
+    margin-top: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.box2{
+justify-content: space-evenly;
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    
+}
+.box2 img{
+    width: 400px;
+    height: 350px;
+    margin-top: 40px;
+}
+.box22 {
+    
+    width: 600px;
+    margin-top: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.box22 p{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.box3{
+
+    height: 300px;
+    font-size: 20px;
+    padding: 40px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 40px;
+    background: linear-gradient(to right ,#f7ede2,#15616d);
+
+
+}
+
+.box3 p{
+    width: 600px;
+    margin-left: 120px;
+    margin-top: 10px;
+}
+.box3 h1{
+    margin-left: 120px;
+}
+
+.box4{
+    margin-top: 40px;
+    text-align: center;
+
+}
+.box4 h1{
+    font-size: 42px;
+    text-align: center;
+    width: 900px;
+    margin-left: 300px;
+
+}
+.box4 p{
+    font-size: 20px;
+    margin-top: 20px;
+
+}
+.box5{
+    justify-content: space-evenly;
+    margin-bottom: 60px;
+}
+.box51{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.box51 img{
+    display: block;
+    margin: auto;
+
+}
+.box51 h2{
+    margin-top: 20px;
+    font-size: 30px;
+}
+.box51 p{
+    font-size: 20px;
+    margin-top: 15px;
+}
+.box52{
+    margin-top: 40px;
+    text-align: center;
+}
+.box52 img{
+    display: block;
+    margin: auto;
+
+}
+.box52 h2{
+    margin-top: 20px;
+    font-size: 30px;
+}
+.box52 p{
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.footer {
+  background-color: #0d1b2a;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.footer div {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.logo2 img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.logo2 p,
+.office p,
+.office2 p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.links h2 {
+  margin-bottom: 10px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 8px;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.links a:hover {
+  color: #ffd60a;
+}
+
+.last {
+  background-color: #000814;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ✅ Responsive Fixes */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+    </style>
+</head>
+<body>  
+        <div>
+        <div id="navbar"> 
+            <div class="logo">
+                <a href="pashupati.html"><img src="pal_logo.png" alt=""> </a>
+            
+            
+            </div>
+
+            <div class="menu"> <a href="pashupati.html">Home </a></div>
+
+            <div class="dropdown">
+  <button onclick="toggleDropdown('productMenu')">Product</button>
+  <div id="productMenu" class="dropdown-content">
+    <a href="acrylic.html">Acrylic</a>
+    <a href="cppfilm.html">CPP Film</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('servicesMenu')">Services</button>
+  <div id="servicesMenu" class="dropdown-content">
+    <a href="research and dev.html">Research and Development</a>
+    <a href="PLANT.HTML">Plant</a>
+    <a href="TECHNOLOGY.html">Technology</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('featuresMenu')">Features</button>
+  <div id="featuresMenu" class="dropdown-content">
+    <a href="features.html">Human Resources</a>
+    <!-- <a href="policy.html">HR Policy</a>
+    <a href="activity.html">Major Activity</a> -->
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('aboutMenu')">About</button>
+  <div id="aboutMenu" class="dropdown-content">
+    <a href="company profime.html">Company Profile</a>
+    <a href="career.html">Career</a>
+  </div>
+</div>
+
+
+            <div class="invertors"> <a href="">Invesrtors </a></div>
+            <div class="contactus"> <a href="contactus.html"> Contact Us</a> </div>
+            <!-- <div class="search">
+                <input placeholder="search..">
+            </div> -->
+        </div>
+    </div>
+    <div class="header1" >
+        <h1> Research And Development</h1>
+    </div>
+
+    <div class="box1" style="display: flex ">
+        <img src="r&d3.jpg" alt="">
+        <div class="box11">
+            <h1>Comprehensive R&D Center</h1>
+            <p>We at Pasupati Acrylon Limited recognize the importance of R&D as the most important tool for continuous upgradation in terms of technology, product quality and preservation of environment.
+
+                <br> 
+
+Therefore R&D remains one of our major thrust areas. In keeping with this objective Pasupati has set up a comprehensive R&D
+ center which is recognized by ministry of science & technology India, due to its excellent performance</p>
+        </div>
+    </div>
+
+    <div class="box2">
+         <div class="box22">
+            <h1>R&D Achievements</h1>
+            <p>Our sustained R&D efforts have enabled us to achieve great degree of import substitution and development of indigenous technology for commercial production of various specialty fibers e.g. Low pill fiber, Hydrophilic fiber & Super high shrinkable fiber etc.
+<br>
+By our continuous R&D efforts we have successfully developed an indigenous GEL Dyeing process and converted it into commercial production. Fibers having diameter of 0.9 denier are defined as micro-denier fibers. Producing micro denier is difficult due to its poor runnability and less productivity.</p>
+        </div>
+        <img src="achievement.jpg" alt="">
+       
+    </div>
+
+    <div class="box3">
+        <h1>Continuous R&D Efforts</h1>
+        <p>By our continuous R&D efforts we have successfully developed An indigenous GEL dyeing process, a state of art Technology to produce online continuous dyed fiber in high bulk quantity with excellent brightness, supreme fastness property and environmental friendly production process.</p>
+    </div>
+
+    <div class="box4">
+        <h1>The Importance of Innovation-driven Research and Development for Sustainable Growth</h1>
+        <p>Our acrylic fiber production has reached a capacity of 45000 MT per annum milestone</p>
+    </div>
+    <div class="box5" style="display: flex;">
+        <div class="box51" style="width: 500px;">
+            <img src="research.png" alt="">
+            <h2>New Product Development Through Innovation</h2>
+            <p>Pasupati has set up a comprehensive R&D center where basic and applied research is carried out for meeting customer need, opening new application area and making value​.
+
+</p>
+        </div>
+          <div class="box52" style="width: 500px;">
+            <img src="research-2.png" alt="">
+            <h2>Enhancing Production</h2>
+            <p>High bulk quantity with excellent brightness, supreme fastness property and environmental friendly production process​.
+
+</p>
+        </div>
+    </div>
+
+      <div class="footer">
+  <div class="logo2">
+    <img src="pal_logo.png" alt="PAL Logo" />
+    <p>
+      We are one of the leading producers of Acrylic fiber. We started commercial operations in 1990 with technical collaboration with SNIA BPD Italy.
+    </p>
+  </div>
+
+  <div class="links">
+    <h2>Quick Links</h2>
+    <ul>
+      <li><a href="ENVIRONMENTAL CLEARANCE.html">Environmental Clearance</a></li>
+      <li><a href="acrylic fiber.html">Acrylic Fiber</a></li>
+      <li><a href="maincpp.html">CPP Film</a></li>
+      <li><a href="ENVIRONMENT.HTML">Environment</a></li>
+      <li><a href="PLANT.HTML">Plant</a></li>
+      <li><a href="research and dev.html">Research and Development</a></li>
+      <li><a href="TECHNOLOGY.html">Technology</a></li>
+    </ul>
+  </div>
+
+  <div class="office">
+    <h3>Corporate Office</h3>
+    <p>M-14, Connaught Circus, New Delhi-110001</p>
+    <p>91-11-47627400<br>delhi@pasupatiacrylon.com<br>hrd@pasupatiacrylon.com</p>
+  </div>
+
+  <div class="office2">
+    <h3>Regd. Office & Works</h3>
+    <p>Kashipur Road, Thakurdwara-244601, Moradabad (U.P.)<br>works@pasupatiacrylon.com</p>
+    <p>Branch Office Ludhiana<br>mktgldh@pasupatiacrylon.com<br>91-161 5083473</p>
+  </div>
+</div>
+
+<div class="last">
+  <p>Copyright © 2025 - Pasupati Acrylon</p>
+</div>
+
+    <script src="pashupati.js">pashupati.js</script>  
+</body>
+</html>

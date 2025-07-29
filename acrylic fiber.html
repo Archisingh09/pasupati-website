@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Acrylic Fiber</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* Reset and font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#navbar{
+    background-color: #0d1b2a;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    height:50px;
+}
+.logo{
+    margin-top: 13px;
+}
+.menu{
+    text-decoration: none;
+    margin-top: 13px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.menu :hover{
+    color: #ffd60a;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 13px;
+  font-size: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  margin-top: 10px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #fff;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
+button{
+    padding: 2px 4px;
+    cursor: pointer;
+    background-color: #0d1b2a;
+    color: white;
+    border: none;
+    font-size: 18px;
+}
+.dropdown  :hover{
+    color: #ffd60a;
+}
+
+
+.invertors{
+    margin-top: 13px;
+}
+.invertors a{
+       color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+.invertors :hover{
+    color: #ffd60a;
+}
+
+
+.contactus {
+    margin-top: 13px;
+    font-size: 20px;
+}
+.contactus a{
+    
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.contactus :hover{
+    
+    color: #ffd60a;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #0077b6, #0096c7);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd60a;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 950px;
+    margin: auto;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    
+}
+
+h2 {
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: inside square;
+    padding-left: 20px;
+}
+
+/* Cards for properties */
+.card-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #dbe5ff;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 200px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Advantages & Disadvantages box */
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box {
+    background-color: #dbe5ff;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#images h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.image-gallery img {
+    width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+#characteristics {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #dbe5ff;
+    max-width: 950px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#characteristics h2 {
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 10px;
+    
+}
+
+#characteristics p {
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 30px;
+}
+
+.feature-item {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    filter: hue-rotate(190deg);
+}
+
+.feature-item p {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    
+}
+
+.styled-table th {
+    background-color: #003366;
+    color: white;
+    padding: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.styled-table td {
+    padding: 10px 14px;
+    border: 1px solid #003366;
+
+}
+
+.styled-table tr:nth-child(even) td {
+    background-color: #dbe5ff;
+}
+
+.large-table th,
+.large-table td {
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+#fiber-details, #properties-table, #cutlength-table {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: #0d1b2a;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.footer div {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.logo2 img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.logo2 p,
+.office p,
+.office2 p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.links h2 {
+  margin-bottom: 10px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 8px;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.links a:hover {
+  color: #ffd60a;
+}
+
+.last {
+  background-color: #000814;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ✅ Responsive Fixes */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+    </style>
+</head>
+
+<body>
+        <div>
+        <div id="navbar"> 
+            <div class="logo">
+                <a href="pashupati.html"><img src="pal_logo.png" alt=""> </a>
+            
+            
+            </div>
+
+            <div class="menu"> <a href="pashupati.html">Home </a></div>
+
+            <div class="dropdown">
+  <button onclick="toggleDropdown('productMenu')">Product</button>
+  <div id="productMenu" class="dropdown-content">
+    <a href="acrylic.html">Acrylic</a>
+    <a href="cppfilm.html">CPP Film</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('servicesMenu')">Services</button>
+  <div id="servicesMenu" class="dropdown-content">
+    <a href="research and dev.html">Research and Development</a>
+    <a href="PLANT.HTML">Plant</a>
+    <a href="TECHNOLOGY.html">Technology</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('featuresMenu')">Features</button>
+  <div id="featuresMenu" class="dropdown-content">
+    <a href="features.html">Human Resources</a>
+    <!-- <a href="policy.html">HR Policy</a>
+    <a href="activity.html">Major Activity</a> -->
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('aboutMenu')">About</button>
+  <div id="aboutMenu" class="dropdown-content">
+    <a href="company profime.html">Company Profile</a>
+    <a href="career.html">Career</a>
+  </div>
+</div>
+
+
+            <div class="invertors"> <a href="">Invesrtors </a></div>
+            <div class="contactus"> <a href="contactus.html"> Contact Us</a> </div>
+            <!-- <div class="search">
+                <input placeholder="search..">
+            </div> -->
+        </div>
+    </div>
+
+    <header>
+        <h1>Acrylic Fiber</h1>
+        <nav>
+            <a href="#intro">Introduction</a>
+            <a href="#properties">Properties</a>
+            <a href="#uses">Uses</a>
+            <a href="#advantages">Pros & Cons</a>
+            <a href="#images">Images</a>
+            <a href="#characteristics">Characteristics</a>
+            <a href="#fiber-details">Tables
+            </a>
+        </nav>
+    </header>
+
+    <section id="intro"> 
+        <h2>Introduction</h2>
+        <p>Acrylic fiber is a synthetic fiber made from polyacrylonitrile. It is soft, lightweight, warm, and often used as a wool substitute in textiles and fabrics.</p>
+    </section>
+
+    <section id="properties">
+        <h2>Properties</h2>
+        <div class="card-list">
+            <div class="card">Soft & Lightweight</div>
+            <div class="card">UV Resistant</div>
+            <div class="card">Quick Drying</div>
+            <div class="card">Easily Dyed</div>
+        </div>
+    </section>
+
+    <section id="uses">
+        <h2>Uses of Acrylic Fiber</h2>
+        <ul>
+            <li>Clothing (Sweaters, Scarves, Gloves)</li>
+            <li>Home Furnishings (Curtains, Upholstery)</li>
+            <li>Outdoor Fabrics</li>
+            <li>Blankets & Throws</li>
+        </ul>
+    </section>
+
+    <section id="advantages">
+        <h2>Advantages & Disadvantages</h2>
+        <div class="flexbox">
+            <div class="box">
+                <h3>Advantages</h3>
+                <ul>
+                    <li>Affordable alternative to wool</li>
+                    <li>Lightweight and warm</li>
+                    <li>Durable and colorfast</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>Disadvantages</h3>
+                <ul>
+                    <li>Not breathable</li>
+                    <li>Melts under high heat</li>
+                    <li>Non-biodegradable</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="images">
+        <h2> Images</h2>
+        <div class="image-gallery">
+            <img src="af2.webp" alt="Acrylic fiber close-up">
+            <img src="download.jpg" alt="Acrylic fiber structure">
+        </div>
+    </section>
+    <section id="characteristics">
+    <h2>Characteristics of Acrylic Fibre</h2>
+    <p>The unique kidney shape cross-section of acrylon fiber imparts excellent softness and suppleness to the garments produced from this fiber.</p>
+    <div class="features-grid">
+        <div class="feature-item">
+            <img src="bright.png" alt="Brightness">
+            <p>Brightness</p>
+        </div>
+        <div class="feature-item">
+            <img src="hair-dye.png" alt="Easy Dyeability">
+            <p>Easy Dyeability</p>
+        </div>
+        <div class="feature-item">
+            <img src="feather.png" alt="Light Weight">
+            <p>Light Weight</p>
+        </div>
+        <div class="feature-item">
+            <img src="Screenshot 2025-07-12 121422.png" alt="Fluffy">
+            <p>Fluffy</p>
+        </div>
+        <div class="feature-item">
+            <img src="soft and warm.png" alt="Soft And Warm">
+            <p>Soft And Warm</p>
+        </div>
+        <div class="feature-item">
+            <img src="Screenshot 2025-07-12 121624.png" alt="Low Pill Formation">
+            <p>Low Pill Formation</p>
+        </div>
+        <div class="feature-item">
+            <img src="dyrable and strong.png" alt="Durable">
+            <p>Durable And Strong</p>
+        </div>
+        <div class="feature-item">
+            <img src="long lasting.png" alt="Pleats">
+            <p>Long Lasting Pleats</p>
+        </div>
+        <div class="feature-item">
+            <img src="resistance ti sunlight.png" alt="Chemical Resistant">
+            <p>Resistance to Sunlight And Chemicals</p>
+        </div>
+        <div class="feature-item">
+            <img src="bug (1).png" alt="Insect Resistant">
+            <p>Resistance to Moths And Insects</p>
+        </div>
+        <div class="feature-item">
+            <img src="gear.png" alt="Low Maintenance">
+            <p>Easy Laundering And Low Maintenance Cost</p>
+        </div>
+        <div class="feature-item">
+            <img src="water-resistant.png" alt="Abrasion Resistant">
+            <p>High Resistance to Abrasion</p>
+        </div>
+    </div>
+</section>
+
+<section id="fiber-details">
+    <h2>Acrylic Staple Fiber Raw White</h2>
+    <table class="styled-table">
+        <tr>
+            <th colspan="2">TABLE HEADER: ACRYLIC STAPLE FIBER RAW WHITE</th>
+        </tr>
+        <tr>
+            <td>Fiber Denier</td>
+            <td>0.9 to 15</td>
+        </tr>
+        <tr>
+            <td>Luster</td>
+            <td>Bright / Semi Dull</td>
+        </tr>
+        <tr>
+            <td>Packing</td>
+            <td>HDPE Bales of 320±10Kg.</td>
+        </tr>
+        <tr>
+            <td>Characteristics</td>
+            <td>Regular, Shrinkable, Super High Shrinkable</td>
+        </tr>
+        <tr>
+            <td>Cut-length (mm)</td>
+            <td>Variable cut length</td>
+        </tr>
+    </table>
+</section>
+
+<section id="properties-table">
+    <h2>Properties of Acrylic Staple Fiber</h2>
+    <table class="styled-table large-table">
+        <tr>
+            <th rowspan="2">Properties</th>
+            <th rowspan="2">Units</th>
+            <th colspan="11">Type</th>
+        </tr>
+        <tr>
+            <th>0.9</th><th>1.2</th><th>1.5</th><th>2</th><th>3</th><th>5</th><th>7</th><th>8</th><th>10</th><th>11</th><th>15</th>
+        </tr>
+        <tr>
+            <td>Fineness</td><td>Denier</td>
+            <td colspan="11"></td>
+        </tr>
+        <tr>
+            <td>Tenacity</td><td>gm/denier</td>
+            <td>&lt; 3.5</td><td>&lt; 3.2</td><td>&lt; 3.0</td><td>&lt; 3.0</td><td>&lt; 2.8</td>
+            <td>&lt; 2.6</td><td>&lt; 2.5</td><td>&lt; 2.5</td><td>&lt; 2.5</td><td>&lt; 2.5</td><td>&lt; 2.3</td>
+        </tr>
+        <tr>
+            <td>Elongation</td><td>(%)</td>
+            <td>32±5</td><td>38±7</td><td colspan="9">40±7</td>
+        </tr>
+        <tr>
+            <td>Shrinkage – (Regular)</td><td>(%)</td>
+            <td>&lt; 2.5</td><td>&lt; 2.5</td><td>&lt; 3.0</td><td>&lt; 3.0</td><td>&lt; 3.0</td>
+            <td>&lt; 3.5</td><td>&lt; 3.5</td><td>&lt; 3.0</td><td>&lt; 3.5</td><td>&lt; 3.5</td><td>&lt; 3.0</td>
+        </tr>
+        <tr>
+            <td>(Shrinkable)</td><td></td>
+            <td colspan="5">22±2</td><td colspan="2">28±2 (HO)</td><td colspan="4"></td>
+        </tr>
+    </table>
+</section>
+
+<section id="cutlength-table">
+    <h2>Cut Length, Luster and Type by Denier Range</h2>
+    <table class="styled-table">
+        <tr>
+            <th>DENIER RANGE</th>
+            <th>CUT LENGTH (MM)</th>
+            <th>LUSTER</th>
+            <th>TYPE</th>
+        </tr>
+        <tr><td>0.9</td><td>44,51</td><td>Bright</td><td>Regular</td></tr>
+        <tr><td>1.2</td><td>38,44,51</td><td>Bright/Semi Dull</td><td>Regular</td></tr>
+        <tr><td>1.5</td><td>38,44,51</td><td>Bright/Semi</td><td>Regular</td></tr>
+        <tr><td>2</td><td>44,51,64</td><td>Bright/Semi</td><td>Regular/Shrinkable</td></tr>
+        <tr><td>3</td><td>344,51, 64,100,102VC, 105VC,125VC, 136VC</td><td>Bright/Semi</td><td>Regular/Shrinkable</td></tr>
+        <tr><td>5</td><td>64,100, 120,150,102VC, 105VC,125VC ,136VC</td><td>Bright/Semi</td><td>Regular/Shrinkable</td></tr>
+        <tr><td>7</td><td>100,120, 150,102VC, 105VC,125VC ,136VC</td><td>Bright/Semi</td><td>Regular/Shrinkable</td></tr>
+        <tr><td>8</td><td>100,120, 150,102VC, 105VC,125VC ,136VC</td><td>Bright/Semi</td><td>Regular/Shrinkable</td></tr>
+        <tr><td>10</td><td>100,120, 150,102VC, 105VC,125VC ,136VC</td><td>Bright/Semi</td><td>Regular/Shrinkable</td></tr>
+        <tr><td>11</td><td>100,120, 150,102VC, 105VC,125VC ,136VC</td><td>Bright/Semi</td><td>Regular/Shrinkable</td></tr>
+        <tr><td>15</td><td>100,120, 150,102VC, 105VC,125VC ,136VC</td><td>Bright/Semi</td><td>Regular/Shrinkable</td></tr>
+    </table>
+    <p><strong>VC:</strong> VARIABLE CUT LENGTH, 102VC (70–125mm), 105VC (85–125mm), 125VC (100–150mm), 136VC (125–150mm)</p>
+</section>
+
+
+
+     <div class="footer">
+  <div class="logo2">
+    <img src="pal_logo.png" alt="PAL Logo" />
+    <p>
+      We are one of the leading producers of Acrylic fiber. We started commercial operations in 1990 with technical collaboration with SNIA BPD Italy.
+    </p>
+  </div>
+
+  <div class="links">
+    <h2>Quick Links</h2>
+    <ul>
+      <li><a href="ENVIRONMENTAL CLEARANCE.html">Environmental Clearance</a></li>
+      <li><a href="acrylic fiber.html">Acrylic Fiber</a></li>
+      <li><a href="maincpp.html">CPP Film</a></li>
+      <li><a href="ENVIRONMENT.HTML">Environment</a></li>
+      <li><a href="PLANT.HTML">Plant</a></li>
+      <li><a href="research and dev.html">Research and Development</a></li>
+      <li><a href="TECHNOLOGY.html">Technology</a></li>
+    </ul>
+  </div>
+
+  <div class="office">
+    <h3>Corporate Office</h3>
+    <p>M-14, Connaught Circus, New Delhi-110001</p>
+    <p>91-11-47627400<br>delhi@pasupatiacrylon.com<br>hrd@pasupatiacrylon.com</p>
+  </div>
+
+  <div class="office2">
+    <h3>Regd. Office & Works</h3>
+    <p>Kashipur Road, Thakurdwara-244601, Moradabad (U.P.)<br>works@pasupatiacrylon.com</p>
+    <p>Branch Office Ludhiana<br>mktgldh@pasupatiacrylon.com<br>91-161 5083473</p>
+  </div>
+</div>
+
+<div class="last">
+  <p>Copyright © 2025 - Pasupati Acrylon</p>
+</div>
+
+    <script src="pashupati.js">pashupati.js</script>
+</body>
+</html>

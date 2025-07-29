@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acrylic</title>
+    <style>
+
+    *{
+    margin: 0;
+    padding: 0%;
+}
+
+#navbar{
+    background-color: #0d1b2a;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    height:50px;
+}
+.logo{
+    margin-top: 13px;
+}
+.menu{
+    text-decoration: none;
+    margin-top: 13px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.menu :hover{
+    color: #ffd60a;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 13px;
+  font-size: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  margin-top: 10px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #fff;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
+button{
+    padding: 2px 4px;
+    cursor: pointer;
+    background-color: #0d1b2a;
+    color: white;
+    border: none;
+    font-size: 18px;
+}
+.dropdown  :hover{
+    color: #ffd60a;
+}
+
+
+.invertors{
+    margin-top: 13px;
+}
+.invertors a{
+       color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+.invertors :hover{
+    color: #ffd60a;
+}
+
+
+.contactus {
+    margin-top: 13px;
+    font-size: 20px;
+}
+.contactus a{
+    
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.contactus :hover{
+    
+    color: #ffd60a;
+}
+
+.firsth1 {
+    
+    background-image: url('acrylicphoto2.JPG');
+    height: 690px;
+    width: 100%;
+    display: flex;
+    font-size: 50px;
+    color: #023047;
+}
+.heading h1{
+    margin-top: 140px;
+    margin-left: 400px;
+}
+
+.acrylic{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #97a97c;
+    padding: 12px;
+}
+.acrylic button{
+    text-decoration: none;
+    font-size: 30px;
+    background-color: #aec3b0;
+    color: black;
+    border: 2px solid #023047;
+    border-radius: 5px;
+}
+
+.acrylic button a{
+    color: #023047;
+    text-decoration: none;
+    padding: 10px;
+}
+
+
+.productimg{
+    background-color: #cfe1b9;
+    height: 400px;
+    width: 100%;
+}
+
+.productrange{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.productrange img{
+    height: 300px;
+    width: 500px;
+    margin-left: 200px;
+    margin-top: 45px;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+.product{
+    
+    background-color: #dad7cd;
+    width: 1200px;
+}
+
+.product h1{
+    margin-top: 50px;
+    margin-left: 40px;
+    font-size: 40px;
+
+
+} 
+.product p{
+    width: 500px;
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+.specialities{
+    display: flex;
+}
+
+.headingpara{
+    width: 861px;
+    background-color: #dad7cd;
+    height: 420px;
+}
+.headingpara h1{
+    margin-left: 200px;
+    margin-top: 20px;
+    font-size: 40px;
+    text-decoration: dotted;
+}
+
+.headingpara p{
+    width: 500px;
+    margin-left: 200px;
+    margin-top: 5px;
+    font-size: 20px;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.headingpara br{
+    margin-left: 200px;
+}
+
+.specialimg{
+    width: 680px;
+    height: 420px;
+    background-color: #cfe1b9;
+    
+}
+
+.specialimg img{
+    height: 150px;
+    width: 200px;
+    margin-left: 80px;
+    margin-top: 30px;
+    border: 2px solid white;
+    border-radius: 12px;
+
+
+}
+.list{
+    margin-left: 220px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.list li{
+    margin-bottom: 5px;
+}
+
+.growthpart{
+    display: flex;
+    height: 400px;
+}
+
+.growthimg{
+    width: 850px;
+    background-color: #cfe1b9;
+
+}
+.growthpart img{
+    width: 300px;
+    height: 300px;
+    margin-top: 45px;
+    margin-left: 220px;
+    border: 2px solid #023047;
+}
+
+.growthparthp{
+    background-color: #dad7cd;
+    width: 672px;
+}
+
+.growthparthp h1{
+    margin-top: 10px;
+    margin-left: 70px;
+    font-size: 40px;
+}
+
+.growthparthp p{
+    margin-top: 10px;
+    margin-left: 70px;
+    width: 500px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.offering{
+    text-align: center;
+    background-color: #faedcd;
+    padding: 40px;
+    font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.offerimg{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+
+.offerimg h2{
+    width: 300px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.img1 {
+    background-color: #aec3b0  ;
+    height: 500px;
+    width: 400px;
+    border: 2px solid #97a97c;
+    border-radius: 12px;
+    
+}
+.img2 {
+    background-color: #dad7cd   ;
+    height: 500px;
+    width: 400px;
+    
+    border: 2px solid #588157;
+    border-radius: 12px;
+    
+}
+.img3 {
+    background-color: #aec3b0;
+    height: 500px;
+    width: 400px;
+    
+    border: 2px solid #588157;
+    border-radius: 12px;
+    
+}
+.img4 {
+    background-color: #dad7cd  ;
+    height: 500px;
+    width: 400px;
+    
+    border: 2px solid #588157;
+    border-radius: 12px;
+    
+}
+
+.img1 img{
+    height: 300px;
+    width: 300px;
+    
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px
+
+}
+.img2 img{
+    height: 300px;
+    width: 300px;
+    
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px
+}
+.img3 img{
+    height: 300px;
+    width: 300px;
+    
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px
+}
+.img4 img{
+    height: 300px;
+    width: 300px;
+    
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px
+}
+
+.box3{
+    display: flex;
+
+}
+
+.box2 h1{
+    margin-left: 740px;
+    margin-top: 40px;
+}
+
+ .box3 p{
+    width: 300px;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 150px;
+
+    margin-top: 20px;
+}
+ .box3 img{
+    margin-left: 200px;
+    height: 300px;
+    width: 330px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+  
+}
+
+
+
+.footer {
+  background-color: #0d1b2a;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.footer div {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.logo2 img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.logo2 p,
+.office p,
+.office2 p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.links h2 {
+  margin-bottom: 10px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 8px;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.links a:hover {
+  color: #ffd60a;
+}
+
+.last {
+  background-color: #000814;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ✅ Responsive Fixes */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+
+     <div>
+        <div id="navbar"> 
+            <div class="logo">
+                <a href="pashupati.html"><img src="pal_logo.png" alt=""> </a>
+            
+            
+            </div>
+
+            <div class="menu"> <a href="pashupati.html">Home </a></div>
+
+            <div class="dropdown">
+  <button onclick="toggleDropdown('productMenu')">Product</button>
+  <div id="productMenu" class="dropdown-content">
+    <a href="acrylic.html">Acrylic</a>
+    <a href="cppfilm.html">CPP Film</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('servicesMenu')">Services</button>
+  <div id="servicesMenu" class="dropdown-content">
+    <a href="research and dev.html">Research and Development</a>
+    <a href="PLANT.HTML">Plant</a>
+    <a href="TECHNOLOGY.html">Technology</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('featuresMenu')">Features</button>
+  <div id="featuresMenu" class="dropdown-content">
+    <a href="features.html">Human Resources</a>
+    <!-- <a href="policy.html">HR Policy</a>
+    <a href="activity.html">Major Activity</a> -->
+  </div>
+</div>
+<div class="dropdown">
+  <button onclick="toggleDropdown('aboutMenu')">About</button>
+  <div id="aboutMenu" class="dropdown-content">
+    <a href="company profime.html">Company Profile</a>
+    <a href="career.html">Career</a>
+  </div>
+</div>
+
+
+            <div class="invertors"> <a href="">Invesrtors </a></div>
+            <div class="contactus"> <a href="contactus.html"> Contact Us</a> </div>
+            <!-- <div class="search">
+                <input placeholder="search..">
+            </div> -->
+        </div>
+    </div>
+
+  
+<div class="firsth1">
+    <div class="heading">
+        <h1> Pasupati Acrylon</h1>
+    </div>
+    </div>  
+    
+<div class="acrylic">  
+<div class="acrylicfiber">
+    <button><a href="acrylic fiber.html"> Acrylic fiber </a></button>
+</div>  
+
+<div class="acrylictow">
+    <button><a href="Acrylic tow.html"> Acrylic Tow </a></button>
+</div>  
+
+<div class="acrylictops">
+    <button><a href="acrylic tops.html"> Acrylic Tops </a></button>
+</div>  
+</div>
+
+
+    <div class="productrange">
+        <div class="productimg">
+        <img src="productrange.jpg" alt="productimage">
+        </div>
+        <div class="product">
+            <h1>Product Range</h1>
+            <p>Pasupati product range is very wide in terms of denier, cut length, luster etc. we have maximum range of Deniers
+                 (0.9-15.0 Denier), Cut lengths (38-150mm), Luster (Semi-dull, Bright, Super Bright) and Dyed (Gel Dyed, Tow Dyed). Our products
+                 have found end uses in varying sectors like Sweaters, Shawls, Apparels, Blankets, Carpets and Upholstery.</p>
+        </div>
+    </div>
+
+<div class="specialities">
+    <div class="headingpara"><h1>Our Specialities</h1>
+   <p> Pasupati products conform to certification under ISO 9001:2015 and OKEO TEX STANDARD 100 CLASS1 APPENDIX 6.
+      These recognitions are indicative of our commitment in meeting global quality standards and thrust towards excellence for achieving customer satisfaction.
+    
+   </p>
+
+   <div class="list">
+<ul>
+    <li> Gel Dyed</li>
+    <li> Low Pill Fiber</li>
+    <li> Shrinkable Fiber</li>
+    <li>Soft Feel Fiber</li>
+    <li> Tow Dyed</li>
+    <li> Super Bright Fibe</li>
+</ul></div>
+    </div>
+      <div class="specialimg">
+        <img src="ShrinkableFiber.jpg" alt="">
+        <img src="SoftFiber.jpg" alt="">
+        <div class="secondimg">
+        <img src="HydrophilicFiber.jpg" alt="">
+        <img src="LowPill-rotated.jpg" alt="">
+        </div>
+      </div>
+</div>
+
+<div class="growthpart">
+    <div class="growthimg">
+        <img src="ChatGPT Image Jul 7, 2025, 01_07_19 PM.png" alt="">
+          </div>
+    <div class="growthparthp">
+    
+    <h1>Our Growth Path</h1>
+    <p>Pasupati was designed for a rated capacity of 15000TPA. By means of various innovative modifications, installation of an
+         additional spinning line the capacity has been enhanced to a level of 45,000 TPA. Advance technology, automation, computerized process 
+         control systems and captive power, make the operations of Pasupati extremely efficient and reliable. Pasupati is one of the best plants
+          in the world, running on SNIA technology.</p>
+          </div>
+   
+</div>
+
+<div class="offering">
+    <h1>OUR OFFERINGS</h1>
+</div>
+
+<div class="offerimg">
+    <div class="img1">
+        <img src="tow_1.jpg" alt="">
+        <h2>Raw White Bright Or Semi Dull </h2>
+    </div>
+
+    <div class="img2">
+        <img src="Super_Bright.jpg" alt="">
+        <h2>
+Bleached (Optical White)</h2>
+    </div>
+
+    <div class="img3">
+        <img src="Tow-Dyed-Fiber.jpg" alt="">
+        <h2>
+Tow Dyed In Many Colours</h2>
+
+    </div>
+    <div class="img4">
+        <img src="gel-dyed-Fiber_1.jpg" alt="">
+        <h2>Gel-Dyed, In Vast Range Of Solid Colours
+</h2>
+    </div>
+</div>
+   <div class="footer">
+  <div class="logo2">
+    <img src="pal_logo.png" alt="PAL Logo" />
+    <p>
+      We are one of the leading producers of Acrylic fiber. We started commercial operations in 1990 with technical collaboration with SNIA BPD Italy.
+    </p>
+  </div>
+
+  <div class="links">
+    <h2>Quick Links</h2>
+    <ul>
+      <li><a href="ENVIRONMENTAL CLEARANCE.html">Environmental Clearance</a></li>
+      <li><a href="acrylic fiber.html">Acrylic Fiber</a></li>
+      <li><a href="maincpp.html">CPP Film</a></li>
+      <li><a href="ENVIRONMENT.HTML">Environment</a></li>
+      <li><a href="PLANT.HTML">Plant</a></li>
+      <li><a href="research and dev.html">Research and Development</a></li>
+      <li><a href="TECHNOLOGY.html">Technology</a></li>
+    </ul>
+  </div>
+
+  <div class="office">
+    <h3>Corporate Office</h3>
+    <p>M-14, Connaught Circus, New Delhi-110001</p>
+    <p>91-11-47627400<br>delhi@pasupatiacrylon.com<br>hrd@pasupatiacrylon.com</p>
+  </div>
+
+  <div class="office2">
+    <h3>Regd. Office & Works</h3>
+    <p>Kashipur Road, Thakurdwara-244601, Moradabad (U.P.)<br>works@pasupatiacrylon.com</p>
+    <p>Branch Office Ludhiana<br>mktgldh@pasupatiacrylon.com<br>91-161 5083473</p>
+  </div>
+</div>
+
+<div class="last">
+  <p>Copyright © 2025 - Pasupati Acrylon</p>
+</div>
+
+    <script src="pashupati.js">pashupati.js</script>
+</body>
+</html>
+    
